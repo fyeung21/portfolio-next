@@ -2,13 +2,17 @@
 
 :root {
   --background: linear-gradient(to bottom, #1b105e, #383bdd);
-  --foreground: #e6d9a9;
+  --foreground: #ffebaa;
+  --gold-300: var(--foreground);
+  --underline-glow: 0px 10px 10px -8px rgba(255, 235, 170, 0.8);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
+  --color-gold-300: var(--gold-300);
+  --shadow-underline: var(--underline-glow);
 }
 
 body {
