@@ -1,3 +1,5 @@
+import { skillsList } from "@/public/lib/skillsList";
+
 export default function Home() {
   return (
     <section className="m-4">
@@ -9,7 +11,23 @@ export default function Home() {
         </p>
       </section>
       <section>{"map list of projects here"}</section>
-      <section>{"map list of skills here"}</section>
+      <section>
+        <h2>skills</h2>
+        <article>
+          <ul>
+            {skillsList.map((skillCategory, id) => (
+              <li key={id}>
+                <h3>{skillCategory.title}</h3>
+                <ul>
+                  {skillCategory.skills.map((skill, id) => (
+                    <li key={id}>{skill}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </article>
+      </section>
     </section>
   );
 }
