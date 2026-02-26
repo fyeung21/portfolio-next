@@ -1,5 +1,7 @@
 import { skillsList } from "@/public/lib/skillsList";
 import SkillsContainer from "./components/skillsContainer";
+import { projectsList } from "@/public/lib/projectsList";
+import ProjectCard from "./components/projectCard";
 
 export default function Home() {
   return (
@@ -11,7 +13,15 @@ export default function Home() {
           thumbnails below to check out my projects!"
         </p>
       </section>
-      <section>{"map list of projects here"}</section>
+      <section>
+        {projectsList.length !== 0 ? (
+          <article>
+            {projectsList.map((project, id) => (
+              <ProjectCard key={id} />
+            ))}
+          </article>
+        ) : null}
+      </section>
       <SkillsContainer skillsList={skillsList} />
     </section>
   );
