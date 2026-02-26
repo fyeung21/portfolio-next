@@ -4,7 +4,7 @@ export type FooterProps = {
 
 export default function Footer({ copyrightYear }: FooterProps) {
   return (
-    <section className="font-sans text-shadow-lg m-4 flex flex-row items-center justify-between">
+    <footer className="font-sans text-shadow-lg m-4 md:py-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-200">
       <p className="text-sm">&copy; {copyrightYear} Fiona Yeung</p>
       <ul className="flex flex-row">
         <a href="https://ca.linkedin.com/">
@@ -14,6 +14,6 @@ export default function Footer({ copyrightYear }: FooterProps) {
           <li className="pl-2 hover:border-b-2 hover:border-gold-300">github</li>
         </a>
       </ul>
-    </section>
+    </footer>
   );
 }
