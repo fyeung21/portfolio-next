@@ -18,10 +18,10 @@ export default function Header() {
                 work
               </li>
             </Link>
-            <Link href="/about">
+            <Link href="/contact">
               <li
-                className={`ml-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:shadow-underline [&.active]:font-bold ${pathname === "/about" ? "active" : ""} hover:border-b-2 hover:border-gold-300`}>
-                about
+                className={`ml-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:shadow-underline [&.active]:font-bold ${pathname === "/contact" ? "active" : ""} hover:border-b-2 hover:border-gold-300`}>
+                contact
               </li>
             </Link>
           </ul>
