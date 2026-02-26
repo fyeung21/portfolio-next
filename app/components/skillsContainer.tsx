@@ -15,7 +15,7 @@ export default function SkillsContainer({ skillsList }: SkillsContainerProps) {
         <h2 className="text-3xl mb-2">skills</h2>
       </article>
       {skillsList.length !== 0 ? (
-        <ul>
+        <ul className="sm:flex sm:flex-row sm:justify-between">
           {skillsList.map((skillCategory, id) => (
             <li key={id} className="my-6 mb-8">
               <h3 className="text-xl">{skillCategory.title}</h3>

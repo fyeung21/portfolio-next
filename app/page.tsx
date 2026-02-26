@@ -3,7 +3,7 @@ import SkillsContainer from "./components/skillsContainer";
 
 export default function Home() {
   return (
-    <section className="m-4">
+    <section className="m-4 md:w-180 md:m-auto lg:w-200">
       <section className="my-10 p-4 sm:w-120 sm:m-auto sm:p-6">
         <p>
           "Hi there! My name is Fiona and I am a front-end web developer who takes great interest in
