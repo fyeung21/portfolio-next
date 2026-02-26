@@ -1,4 +1,5 @@
 import { skillsList } from "@/public/lib/skillsList";
+import SkillsContainer from "./components/skillsContainer";
 
 export default function Home() {
   return (
@@ -11,23 +12,7 @@ export default function Home() {
         </p>
       </section>
       <section>{"map list of projects here"}</section>
-      <section>
-        <h2>skills</h2>
-        <article>
-          <ul>
-            {skillsList.map((skillCategory, id) => (
-              <li key={id}>
-                <h3>{skillCategory.title}</h3>
-                <ul>
-                  {skillCategory.skills.map((skill, id) => (
-                    <li key={id}>{skill}</li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </article>
-      </section>
+      <SkillsContainer skillsList={skillsList} />
     </section>
   );
 }
