@@ -17,7 +17,16 @@ export default function Home() {
         {projectsList.length !== 0 ? (
           <article>
             {projectsList.map((project, id) => (
-              <ProjectCard key={id} />
+              <ProjectCard
+                key={id}
+                id={project.id}
+                title={project.title}
+                imgSrc={project.imgSrc}
+                imgAltDesc={project.imgAltDesc}
+                cardBrief={project.cardBrief}
+                cardTech={project.cardTech}
+                slug={project.slug}
+              />
             ))}
           </article>
         ) : null}
