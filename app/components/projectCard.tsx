@@ -1,19 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export type keyFeature = {
-  id: number;
-  imgSrc: string;
-  imgAltDesc: string;
-  title: string;
-  description: string;
-};
-export type screenshot = {
-  id: number;
-  imgSrc: string;
-  imgAltDesc: string;
-  caption: string;
-};
 export type ProjectCardProps = {
   id: number;
   title: string;
@@ -22,24 +9,15 @@ export type ProjectCardProps = {
   cardBrief: string;
   cardTech: string[];
   slug: string;
-  //   description: string;
-  //   url: string;
-  //   github: string;
-  //   platform: string;
-  //   technologies: string[];
-  //   keyFeatures: keyFeature[];
-  //   screenshots: screenshot[];
-  //   reflection: string;
+  // description: string;
+  // url: string;
+  // github: string;
+  // platform: string;
+  // technologies: string[];
+  // keyFeatures: keyFeature[];
+  // screenshots: screenshot[];
+  // reflection: string;
 };
-
-//   description,
-//   url,
-//   github,
-//   platform,
-//   technologies,
-//   keyFeatures,
-//   screenshots,
-//   reflection,
 
 export default function ProjectCard({
   id,
@@ -53,7 +31,7 @@ export default function ProjectCard({
   return (
     <>
       <Link href={`/work/${slug}`}>
-        <article className="relative w-auto h-50 overflow-hidden">
+        <article className="relative w-auto h-50 overflow-hidden rounded-2xl">
           <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
         </article>
       </Link>

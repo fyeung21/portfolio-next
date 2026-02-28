@@ -1,40 +1,80 @@
 import Image from "next/image";
 
-export default function ProjectSingleDetails() {
+export type keyFeature = {
+  id: number;
+  imgSrc: string;
+  imgAltDesc: string;
+  title: string;
+  description: string;
+};
+export type screenshot = {
+  id: number;
+  imgSrc: string;
+  imgAltDesc: string;
+  caption: string;
+};
+export type ProjectSingleProps = {
+  //   id: number;
+  title: string;
+  imgSrc: string;
+  imgAltDesc: string;
+  //   cardBrief: string;
+  //   cardTech: string[];
+  slug: string;
+  description: string;
+  url: string;
+  github: string;
+  platform: string;
+  technologies: string[];
+  keyFeatures: keyFeature[];
+  screenshots: screenshot[];
+  reflection: string;
+};
+
+export default function ProjectSingleDetails({
+  title,
+  imgSrc,
+  imgAltDesc,
+  slug,
+  description,
+  url,
+  github,
+  platform,
+  technologies,
+  keyFeatures,
+  screenshots,
+  reflection,
+}: ProjectSingleProps) {
   return (
     <>
       <article className="relative w-auto h-50 overflow-hidden">
-        <Image
-          className="object-cover"
-          src={"/ph-shop.jpg"}
-          alt={"imgAltDesc"}
-          fill={true}
-          priority
-        />
+        <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
       </article>
-      <h2>{"project title"}</h2>
-      <p>{"description"}</p>
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <h3>platforms</h3>
+      <p>{platform}</p>
       <h3>technologies</h3>
       <ul>
-        <li>{"text"}</li>
+        <li>{technologies[0]}</li>
         <li>{"text"}</li>
       </ul>
       <article>
-        <a href="">live site</a>
-        <a href="">github</a>
+        <a href={url}>live site</a>
+        <a href={github}>github</a>
       </article>
       <article>
         <h2>key features</h2>
         <article className="relative w-auto h-50 overflow-hidden">
           <Image
             className="object-cover"
-            src={"/ph-shop.jpg"}
-            alt={"imgAltDesc"}
+            src={keyFeatures[0].imgSrc}
+            alt={keyFeatures[0].imgAltDesc}
             fill={true}
             priority
           />
         </article>
-        <p>textskajnflsaf</p>
+        <p>{keyFeatures[0].description}</p>
         <article className="relative w-auto h-50 overflow-hidden">
           <Image
             className="object-cover"
@@ -51,17 +91,17 @@ export default function ProjectSingleDetails() {
         <article className="relative w-auto h-50 overflow-hidden">
           <Image
             className="object-cover"
-            src={"/ph-shop.jpg"}
-            alt={"imgAltDesc"}
+            src={screenshots[0].imgSrc}
+            alt={screenshots[0].imgAltDesc}
             fill={true}
             priority
           />
         </article>
-        <p>{"caption here"}</p>
+        <p>{screenshots[0].caption}</p>
       </article>
       <article>
         <h2>reflection</h2>
-        <p>textskajnflsaf</p>
+        <p>{reflection}</p>
       </article>
     </>
   );
