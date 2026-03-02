@@ -38,7 +38,11 @@ export default function ProjectCard({
       <article>
         <h3>{title}</h3>
         <p>{cardBrief}</p>
-        <p>{cardTech}</p>
+        <ul>
+          {cardTech.map((techItem, id) => (
+            <li key={id}>{techItem}</li>
+          ))}
+        </ul>
       </article>
     </>
   );
