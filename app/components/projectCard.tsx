@@ -29,23 +29,23 @@ export default function ProjectCard({
   slug,
 }: ProjectCardProps) {
   return (
-    <>
+    <article className="py-2">
       <Link href={`/work/${slug}`}>
-        <article className="relative w-auto h-50 overflow-hidden rounded-2xl">
+        <section className="relative w-auto h-50 overflow-hidden rounded-2xl">
           <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
-        </article>
+        </section>
+        <section className="my-4">
+          <h3 className="text-2xl">{title}</h3>
+          <p className=" my-2">{cardBrief}</p>
+          <ul className="flex flex-row justify-end">
+            {cardTech.map((techItem, id) => (
+              <li key={id} className="italic mr-2 last:mr-0">
+                {techItem}
+              </li>
+            ))}
+          </ul>
+        </section>
       </Link>
-      <article className="my-4">
-        <h3 className="text-2xl">{title}</h3>
-        <p className=" my-2">{cardBrief}</p>
-        <ul className="flex flex-row justify-end">
-          {cardTech.map((techItem, id) => (
-            <li key={id} className="italic mr-2 last:mr-0">
-              {techItem}
-            </li>
-          ))}
-        </ul>
-      </article>
-    </>
+    </article>
   );
 }

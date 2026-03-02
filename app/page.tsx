@@ -13,9 +13,9 @@ export default function Home() {
           thumbnails below to check out my projects!"
         </p>
       </section>
-      <section>
+      <section className="my-12">
         {projectsList.length !== 0 ? (
-          <article>
+          <>
             {projectsList.map((project, id) => (
               <ProjectCard
                 key={id}
@@ -28,7 +28,7 @@ export default function Home() {
                 slug={project.slug}
               />
             ))}
-          </article>
+          </>
         ) : null}
       </section>
       <SkillsContainer skillsList={skillsList} />
