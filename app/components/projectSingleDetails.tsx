@@ -65,14 +65,14 @@ export default function ProjectSingleDetails({
           <article>
             {url ? (
               <a href={url}>
-                <p className="ring-2 rounded-2xl p-4 text-lg text-center w-50 m-auto my-8">
+                <p className="ring-2 rounded-2xl p-4 text-lg text-center w-50 m-auto my-8 hover:font-bold hover:shadow-inset">
                   live site
                 </p>
               </a>
             ) : null}
             {github ? (
               <a href={github}>
-                <p className="ring-2 rounded-2xl p-4 text-lg text-center w-50 m-auto my-8">
+                <p className="ring-2 rounded-2xl p-4 text-lg text-center w-50 m-auto my-8 hover:font-bold hover:shadow-inset">
                   github
                 </p>
               </a>

@@ -5,6 +5,7 @@
   --foreground: #ffebaa;
   --gold-300: var(--foreground);
   --underline-glow: 0px 10px 10px -8px rgba(255, 235, 170, 0.8);
+  --inset-glow: inset 0px 0px 15px 0px rgba(255, 235, 170, 0.8);
 }
 
 @theme inline {
@@ -13,6 +14,7 @@
   --font-sans: var(--font-poppins);
   --color-gold-300: var(--gold-300);
   --shadow-underline: var(--underline-glow);
+  --shadow-inset: var(--inset-glow);
 }
 
 body {
