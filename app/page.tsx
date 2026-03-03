@@ -6,7 +6,7 @@ import ProjectCard from "./components/projectCard";
 export default function Home() {
   return (
     <section className="m-4 md:w-180 md:m-auto lg:w-200">
-      <section className="my-10 p-4 sm:w-120 sm:m-auto sm:p-6">
+      <section className="my-10 py-8 px-4 sm:w-120 sm:m-auto sm:p-6">
         <p>
           "Hi there! My name is Fiona and I am a front-end web developer who takes great interest in
           learning how to write clear and efficient modular code. Please hover over and click on the

@@ -32,7 +32,7 @@ export default function ProjectCard({
       <section className="relative w-auto h-50 overflow-hidden rounded-2xl">
         <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
       </section>
-      <section className="my-4">
+      <section className="px-2 py-4">
         <Link href={`/work/${slug}`}>
           <h3 className="text-2xl hover:underline">{title}</h3>
         </Link>

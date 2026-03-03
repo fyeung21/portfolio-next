@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="m-4 my-10">
+    <section className="mx-4 my-10 px-4">
       <h2 className="text-2xl my-4">contact me</h2>
       <p>
         Filling this form will send an email to me. You may also reach me through{" "}
