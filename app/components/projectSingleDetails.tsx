@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ExternalLink from "./externalLink";
 
 export type keyFeature = {
   id: number;
@@ -63,20 +64,8 @@ export default function ProjectSingleDetails({
             </ul>
           </article>
           <article>
-            {url ? (
-              <a href={url}>
-                <p className="ring-2 rounded-2xl p-4 text-lg text-center w-50 m-auto my-8 hover:font-bold hover:shadow-inset">
-                  live site
-                </p>
-              </a>
-            ) : null}
-            {github ? (
-              <a href={github}>
-                <p className="ring-2 rounded-2xl p-4 text-lg text-center w-50 m-auto my-8 hover:font-bold hover:shadow-inset">
-                  github
-                </p>
-              </a>
-            ) : null}
+            {url ? <ExternalLink url={url} label={"live site"} /> : null}
+            {github ? <ExternalLink url={github} label={"github"} /> : null}
           </article>
         </section>
         <section>
