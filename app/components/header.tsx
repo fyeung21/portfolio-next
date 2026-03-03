@@ -14,7 +14,7 @@ export default function Header() {
           <ul className="flex flex-row">
             <Link href="/">
               <li
-                className={`mx-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:shadow-underline [&.active]:font-bold ${pathname === "/" ? "active" : ""} hover:border-b-2 hover:border-gold-300`}>
+                className={`mx-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:shadow-underline [&.active]:font-bold ${pathname === "/" || "/work/" ? "active" : ""} hover:border-b-2 hover:border-gold-300`}>
                 work
               </li>
             </Link>
