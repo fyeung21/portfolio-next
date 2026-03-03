@@ -7,14 +7,14 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <section className="font-sans text-shadow-lg m-4 flex flex-row items-center justify-between">
+    <header className="font-sans m-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-200 md:my-4">
       <article className="text-3xl">fiona.</article>
       <article>
         <nav>
           <ul className="flex flex-row">
             <Link href="/">
               <li
-                className={`mx-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:shadow-underline [&.active]:font-bold ${pathname === "/" ? "active" : ""} hover:border-b-2 hover:border-gold-300`}>
+                className={`mx-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:shadow-underline [&.active]:font-bold ${pathname === "/" || "/work/" ? "active" : ""} hover:border-b-2 hover:border-gold-300`}>
                 work
               </li>
             </Link>
@@ -27,6 +27,6 @@ export default function Header() {
           </ul>
         </nav>
       </article>
-    </section>
+    </header>
   );
 }

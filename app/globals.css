@@ -5,6 +5,7 @@
   --foreground: #ffebaa;
   --gold-300: var(--foreground);
   --underline-glow: 0px 10px 10px -8px rgba(255, 235, 170, 0.8);
+  --inset-glow: inset 0px 0px 15px 0px rgba(255, 235, 170, 0.8);
 }
 
 @theme inline {
@@ -13,10 +14,31 @@
   --font-sans: var(--font-poppins);
   --color-gold-300: var(--gold-300);
   --shadow-underline: var(--underline-glow);
+  --shadow-inset: var(--inset-glow);
 }
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
+  background: #080c38;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(8, 12, 56, 1) 0%,
+    rgba(33, 37, 129, 1) 80%,
+    rgba(87, 84, 175, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(8, 12, 56, 1) 0%,
+    rgba(33, 37, 129, 1) 80%,
+    rgba(87, 84, 175, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(8, 12, 56, 1) 0%,
+    rgba(33, 37, 129, 1) 80%,
+    rgba(87, 84, 175, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#080C38", endColorstr="#5754AF", GradientType=0);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
