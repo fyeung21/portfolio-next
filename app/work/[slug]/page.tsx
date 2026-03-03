@@ -12,7 +12,6 @@ export default function ProjectSingle() {
         description={projectsList[0].description}
         url={projectsList[0].url}
         github={projectsList[0].github}
-        platform={projectsList[0].platform}
         technologies={projectsList[0].techonologies}
         keyFeatures={projectsList[0].keyFeatures}
         screenshots={projectsList[0].screenshots}

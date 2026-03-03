@@ -24,7 +24,6 @@ export type ProjectSingleProps = {
   description: string;
   url: string;
   github: string;
-  platform: string;
   technologies: string[];
   keyFeatures: keyFeature[];
   screenshots: screenshot[];
@@ -39,7 +38,6 @@ export default function ProjectSingleDetails({
   description,
   url,
   github,
-  platform,
   technologies,
   keyFeatures,
   screenshots,
@@ -55,20 +53,14 @@ export default function ProjectSingleDetails({
           <h2 className="text-2xl my-4">{title}</h2>
           <p>{description}</p>
           <article className="my-4">
-            <article className="my-4">
-              <h3 className="text-xl capitalize">platforms</h3>
-              <p>{platform}</p>
-            </article>
-            <article className="my-4">
-              <h3 className="text-xl capitalize">technologies</h3>
-              <ul className="list-inside list-none marker:content-['✦']">
-                {technologies.map((technology, id) => (
-                  <li key={id}>
-                    <span className="mx-2 leading-8">{technology}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+            <h3 className="text-xl capitalize">technologies</h3>
+            <ul className="list-inside list-none marker:content-['✦']">
+              {technologies.map((technology, id) => (
+                <li key={id}>
+                  <span className="mx-2 leading-8">{technology}</span>
+                </li>
+              ))}
+            </ul>
           </article>
           <article>
             {url ? (

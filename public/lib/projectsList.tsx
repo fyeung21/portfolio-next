@@ -11,7 +11,6 @@ export const projectsList = [
       "‘Catch Oscar’ is a game that has 9 holes where different neighbourhood cats could appear out of. Only one cat will show at one time and will disappear after a couple seconds.",
     url: "https://fiona-yeung.com",
     github: "https://github.com/fyeung21/catch-oscar",
-    platform: "Web",
     techonologies: ["HTML", "CSS", "JavaScript", "jQuery"],
     keyFeatures: [
       {
@@ -59,7 +58,6 @@ export const projectsList = [
       "An aesthetician clinic site something something different neighbourhood cats could appear out of. Only one cat will show at one time and will disappear after a couple seconds.",
     url: "https://fiona-yeung.com",
     github: "https://github.com/fyeung21/catch-oscar",
-    platform: "Web",
     techonologies: ["NextJS", "TailwindCSS", "WordPress"],
     keyFeatures: [
       {

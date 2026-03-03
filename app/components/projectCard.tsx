@@ -12,7 +12,6 @@ export type ProjectCardProps = {
   // description: string;
   // url: string;
   // github: string;
-  // platform: string;
   // technologies: string[];
   // keyFeatures: keyFeature[];
   // screenshots: screenshot[];
