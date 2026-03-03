@@ -51,7 +51,7 @@ export default function ProjectSingleDetails({
       </article>
       <section className="m-4 mb-10">
         <section>
-          <h2 className="text-2xl my-4">{title}</h2>
+          <h2 className="text-3xl my-4">{title}</h2>
           <p>{description}</p>
           <article className="my-4">
             <h3 className="text-xl capitalize">technologies</h3>
@@ -63,7 +63,7 @@ export default function ProjectSingleDetails({
               ))}
             </ul>
           </article>
-          <article>
+          <article className="py-2">
             {url ? <ExternalLink url={url} label={"live site"} /> : null}
             {github ? <ExternalLink url={github} label={"github"} /> : null}
           </article>
