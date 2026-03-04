@@ -7,8 +7,8 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="font-sans m-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-200 md:my-4">
-      <article className="text-3xl">fiona.</article>
+    <header className="font-sans m-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-220 lg:text-lg md:my-4">
+      <article className="text-3xl lg:text-4xl">fiona.</article>
       <article>
         <nav>
           <ul className="flex flex-row">

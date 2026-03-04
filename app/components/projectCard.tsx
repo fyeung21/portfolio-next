@@ -29,7 +29,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <article className="py-2">
-      <section className="relative w-auto h-50 overflow-hidden rounded-2xl">
+      <section className="relative w-auto h-50 overflow-hidden rounded-2xl lg:h-60">
         <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
       </section>
       <section className="px-2 py-4">

@@ -4,8 +4,8 @@ export type FooterProps = {
 
 export default function Footer({ copyrightYear }: FooterProps) {
   return (
-    <footer className="font-sans m-4 md:py-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-200">
-      <p className="text-sm">&copy; {copyrightYear} Fiona Yeung</p>
+    <footer className="font-sans m-4 md:py-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-220 lg:text-lg">
+      <p className="text-sm lg:text-md">&copy; {copyrightYear} Fiona Yeung</p>
       <ul className="flex flex-row">
         <a href="https://ca.linkedin.com/">
           <li className="px-2 hover:border-b-2 hover:border-gold-300">linkedin</li>

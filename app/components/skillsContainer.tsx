@@ -12,7 +12,7 @@ export default function SkillsContainer({ skillsList }: SkillsContainerProps) {
   return (
     <section className="tracking-wide my-12 max-w-100 m-auto sm:max-w-none">
       <article className="border-b-2 border-gold-300 shadow-underline">
-        <h2 className="text-3xl mb-2">skills</h2>
+        <h2 className="text-3xl lg:text-4xl mb-2">skills</h2>
       </article>
       {skillsList.length !== 0 ? (
         <ul className="sm:flex sm:flex-row sm:justify-between">
