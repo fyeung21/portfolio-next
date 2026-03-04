@@ -3,7 +3,7 @@ import { projectsList } from "@/public/lib/projectsList";
 
 export default function ProjectSingle() {
   return (
-    <section>
+    <section className="max-w-100 m-auto sm:max-w-none md:w-180 lg:w-220">
       <ProjectSingleDetails
         title={projectsList[0].title}
         imgSrc={projectsList[0].imgSrc}
