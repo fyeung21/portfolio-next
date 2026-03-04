@@ -50,22 +50,22 @@ export default function ProjectSingleDetails({
         <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
       </article>
       <section className="m-4 mb-10 md:mx-0">
-        <section className="md:flex md:flex-row md:justify-between">
+        <section className="sm:flex sm:flex-row sm:justify-between">
           <article>
             <h2 className="text-3xl my-4 lg:text-4xl">{title}</h2>
             <p>{description}</p>
-            <article className="my-8">
-              <h3 className="text-xl capitalize">technologies</h3>
+            <article className="my-8 sm:mt-4">
+              <h3 className="text-xl capitalize sm:hidden">technologies</h3>
               <ul className="list-inside list-none marker:content-['✦'] sm:flex sm:flex-row">
                 {technologies.map((technology, id) => (
                   <li key={id}>
-                    <span className="mx-2 leading-8">{technology}</span>
+                    <span className="mx-2 leading-8 italic">{technology}</span>
                   </li>
                 ))}
               </ul>
             </article>
           </article>
-          <article className="py-2 sm:flex sm:flex-row sm:justify-evenly md:flex-col md:my-4 md:justify-normal md:px-4">
+          <article className="py-2 sm:my-4 sm:ml-4 md:px-4">
             {url ? <ExternalLink url={url} label={"live site"} /> : null}
             {github ? <ExternalLink url={github} label={"github"} /> : null}
           </article>
