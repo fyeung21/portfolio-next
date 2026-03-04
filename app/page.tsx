@@ -13,7 +13,7 @@ export default function Home() {
           thumbnails below to check out my projects!"
         </p>
       </section>
-      <section className="my-12 max-w-100 m-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8 lg:gap-12">
+      <section className="my-12 max-w-100 m-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8 lg:gap-16">
         {projectsList.length !== 0 ? (
           <>
             {projectsList.map((project, id) => (
