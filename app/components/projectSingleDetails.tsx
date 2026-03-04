@@ -46,7 +46,7 @@ export default function ProjectSingleDetails({
 }: ProjectSingleProps) {
   return (
     <>
-      <article className="relative w-auto h-50 overflow-hidden">
+      <article className="relative h-60 overflow-hidden">
         <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
       </article>
       <section className="m-4 mb-10">
@@ -68,13 +68,13 @@ export default function ProjectSingleDetails({
             {github ? <ExternalLink url={github} label={"github"} /> : null}
           </article>
         </section>
-        <section>
+        <section className="my-12">
           <article className="border-b-2 border-gold-300 shadow-underline my-4">
             <h2 className="text-2xl my-2">key features</h2>
           </article>
           {keyFeatures.map((feature, id) => (
             <article key={id} className="py-4">
-              <article className="relative w-auto h-50 rounded-2xl overflow-hidden">
+              <article className="relative w-auto h-60 rounded-2xl overflow-hidden">
                 <Image
                   className="object-cover"
                   src={feature.imgSrc}
@@ -94,7 +94,7 @@ export default function ProjectSingleDetails({
           </article>
           {screenshots.map((screen, id) => (
             <article key={id} className="py-4">
-              <article className="relative w-auto h-50 rounded-2xl overflow-hidden">
+              <article className="relative w-auto h-60 rounded-2xl overflow-hidden">
                 <Image
                   className="object-cover"
                   src={screen.imgSrc}
