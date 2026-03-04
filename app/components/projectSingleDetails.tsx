@@ -46,16 +46,16 @@ export default function ProjectSingleDetails({
 }: ProjectSingleProps) {
   return (
     <>
-      <article className="relative h-60 overflow-hidden">
+      <article className="relative h-60 overflow-hidden sm:h-70 md:h-80">
         <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
       </article>
       <section className="m-4 mb-10">
         <section>
           <h2 className="text-3xl my-4">{title}</h2>
           <p>{description}</p>
-          <article className="my-4">
+          <article className="my-8">
             <h3 className="text-xl capitalize">technologies</h3>
-            <ul className="list-inside list-none marker:content-['✦']">
+            <ul className="list-inside list-none marker:content-['✦'] sm:flex sm:flex-row">
               {technologies.map((technology, id) => (
                 <li key={id}>
                   <span className="mx-2 leading-8">{technology}</span>
@@ -63,7 +63,7 @@ export default function ProjectSingleDetails({
               ))}
             </ul>
           </article>
-          <article className="py-2">
+          <article className="py-2 sm:flex sm:flex-row sm:justify-evenly">
             {url ? <ExternalLink url={url} label={"live site"} /> : null}
             {github ? <ExternalLink url={github} label={"github"} /> : null}
           </article>
@@ -72,21 +72,23 @@ export default function ProjectSingleDetails({
           <article className="border-b-2 border-gold-300 shadow-underline my-4">
             <h2 className="text-2xl my-2">key features</h2>
           </article>
-          {keyFeatures.map((feature, id) => (
-            <article key={id} className="py-4">
-              <article className="relative w-auto h-60 rounded-2xl overflow-hidden">
-                <Image
-                  className="object-cover"
-                  src={feature.imgSrc}
-                  alt={feature.imgAltDesc}
-                  fill={true}
-                  priority
-                />
+          <article className="sm:grid sm:grid-cols-2 sm:gap-8">
+            {keyFeatures.map((feature, id) => (
+              <article key={id} className="py-4">
+                <article className="relative w-auto h-60 sm:h-50 rounded-2xl overflow-hidden">
+                  <Image
+                    className="object-cover"
+                    src={feature.imgSrc}
+                    alt={feature.imgAltDesc}
+                    fill={true}
+                    priority
+                  />
+                </article>
+                <h3 className="font-bold capitalize my-4">{feature.title}</h3>
+                <p>{feature.description}</p>
               </article>
-              <h3 className="font-bold capitalize my-4">{feature.title}</h3>
-              <p>{feature.description}</p>
-            </article>
-          ))}
+            ))}
+          </article>
         </section>
         <section>
           <article className="border-b-2 border-gold-300 shadow-underline my-4">
@@ -94,7 +96,7 @@ export default function ProjectSingleDetails({
           </article>
           {screenshots.map((screen, id) => (
             <article key={id} className="py-4">
-              <article className="relative w-auto h-60 rounded-2xl overflow-hidden">
+              <article className="relative w-auto h-60 sm:h-90 rounded-2xl overflow-hidden">
                 <Image
                   className="object-cover"
                   src={screen.imgSrc}
