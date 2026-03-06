@@ -10,7 +10,11 @@ export type SkillsContainerProps = {
 
 export default function SkillsContainer({ skillsList }: SkillsContainerProps) {
   return (
-    <section className="tracking-wide my-12 max-w-100 m-auto sm:max-w-none">
+    <section
+      className="tracking-wide my-12 max-w-100 m-auto sm:max-w-none"
+      data-aos="fade-up"
+      data-aos-easing="ease-in"
+      data-aos-duration="1500">
       <article className="border-b-2 border-gold-300 shadow-underline">
         <h2 className="text-3xl lg:text-4xl mb-2">skills</h2>
       </article>

@@ -17,9 +17,9 @@ export default function Home() {
   return (
     <section
       className="m-4 sm:w-120 sm:m-auto md:w-180 lg:w-220"
-      data-aos="fade-in"
+      data-aos="fade-up"
       data-aos-easing="ease-in"
-      data-aos-duration="1000">
+      data-aos-duration="1500">
       <section className="my-10 py-8 px-4 max-w-100 m-auto sm:max-w-none sm:w-160">
         <p>
           "Hi there! My name is Fiona and I am a front-end web developer who takes great interest in
