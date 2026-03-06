@@ -116,7 +116,8 @@ export default function ProjectSingleDetails({
         <article className="border-b-2 border-gold-300 shadow-underline my-4">
           <h2 className="text-2xl my-2 lg:text-3xl">reflection</h2>
         </article>
-        <p>{reflection}</p>
+        {/* <p>{reflection}</p> */}
+        <article dangerouslySetInnerHTML={{ __html: reflection }}></article>
       </section>
     </>
   );
