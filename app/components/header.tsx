@@ -2,12 +2,25 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Header() {
   const pathname = usePathname();
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <header className="font-sans m-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-220 lg:text-lg md:my-4">
+    <header
+      className="font-sans m-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-220 lg:text-lg md:my-4"
+      data-aos="fade-in"
+      data-aos-easing="ease-in"
+      data-aos-duration="1000">
       <Link href={"/"}>
         <article className="text-3xl lg:text-4xl">fiona.</article>
       </Link>
