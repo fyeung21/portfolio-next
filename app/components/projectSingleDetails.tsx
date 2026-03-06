@@ -117,7 +117,7 @@ export default function ProjectSingleDetails({
           <h2 className="text-2xl my-2 lg:text-3xl">reflection</h2>
         </article>
         {/* <p>{reflection}</p> */}
-        <article dangerouslySetInnerHTML={{ __html: reflection }}></article>
+        <article dangerouslySetInnerHTML={{ __html: reflection }} className="rich-text"></article>
       </section>
     </>
   );

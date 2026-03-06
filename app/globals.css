@@ -44,3 +44,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.rich-text p {
+  padding-bottom: 2rem;
+}
+.rich-text ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+.rich-text h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
