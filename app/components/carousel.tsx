@@ -3,8 +3,15 @@
 import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
+import Image from "next/image";
 
-export function Carousel() {
+export type CarouselProps = {
+  title: string;
+  imgSrc: string;
+  imgAltDesc: string;
+};
+
+export function Carousel({ title, imgSrc, imgAltDesc }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   const goToPrev = () => emblaApi?.scrollPrev();
@@ -22,11 +29,12 @@ export function Carousel() {
     <section className="embla">
       <article className="embla__viewport overflow-hidden" ref={emblaRef}>
         <section className="embla__container flex flex-row touch-pan-y touch-pinch-zoom">
-          <article className="embla__slide bg-amber-500 basis-full min-w-0 grow-0 shrink-0">
-            Slide 1
+          <article className="embla__slide basis-full min-w-0 grow-0 shrink-0">
+            <article className="relative w-auto h-20">
+              <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
+            </article>
+            <p>{title}</p>
           </article>
-          <article className="embla__slide basis-full min-w-0 grow-0 shrink-0">Slide 2</article>
-          <article className="embla__slide basis-full min-w-0 grow-0 shrink-0">Slide 3</article>
         </section>
       </article>
       <article>

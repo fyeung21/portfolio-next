@@ -1,5 +1,6 @@
 "use client";
 
+import { Carousel } from "@/app/components/carousel";
 import ProjectSingleDetails from "@/app/components/projectSingleDetails";
 import { projectsList } from "@/public/lib/projectsList";
 // import AOS from "aos";
@@ -33,6 +34,7 @@ export default function ProjectSingle() {
         screenshots={projectsList[0].screenshots}
         reflection={projectsList[0].reflection}
       />
+      <Carousel title={"catch oscar"} imgSrc={"/ph-shop.jpg"} imgAltDesc={""} />
     </section>
   );
 }
