@@ -31,11 +31,11 @@ export function Carousel({ itemList }: CarouselProps) {
 
   return (
     <section className="embla">
-      <article className="embla__viewport overflow-hidden" ref={emblaRef}>
+      <article className="embla__viewport overflow-hidden py-4" ref={emblaRef}>
         <section className="embla__container flex flex-row touch-pan-y touch-pinch-zoom">
           {itemList.map((item, id) => (
-            <article key={id} className="embla__slide basis-full min-w-0 grow-0 shrink-0">
-              <article className="relative w-auto h-20">
+            <article key={id} className="embla__slide basis-64 grow-0 shrink-0 mx-4">
+              <article className="relative h-40 rounded-2xl overflow-hidden ">
                 <Image
                   className="object-cover"
                   src={item.imgSrc}
@@ -44,7 +44,7 @@ export function Carousel({ itemList }: CarouselProps) {
                   priority
                 />
               </article>
-              <p>{item.title}</p>
+              <h3 className="text-2xl m-2">{item.title}</h3>
             </article>
           ))}
         </section>
