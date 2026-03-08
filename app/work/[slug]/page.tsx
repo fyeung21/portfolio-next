@@ -1,8 +1,8 @@
 "use client";
 
-import { Carousel } from "@/app/components/carousel";
 import ProjectSingleDetails from "@/app/components/projectSingleDetails";
 import { projectsList } from "@/public/lib/projectsList";
+import ProjectNav from "@/app/components/projectNav";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 // import { useEffect } from "react";
@@ -34,7 +34,7 @@ export default function ProjectSingle() {
         screenshots={projectsList[0].screenshots}
         reflection={projectsList[0].reflection}
       />
-      <Carousel title={"catch oscar"} imgSrc={"/ph-shop.jpg"} imgAltDesc={""} />
+      <ProjectNav />
     </section>
   );
 }

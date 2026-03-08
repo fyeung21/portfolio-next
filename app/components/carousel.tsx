@@ -5,13 +5,17 @@ import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import Image from "next/image";
 
-export type CarouselProps = {
+export type project = {
   title: string;
   imgSrc: string;
   imgAltDesc: string;
 };
 
-export function Carousel({ title, imgSrc, imgAltDesc }: CarouselProps) {
+export type CarouselProps = {
+  itemList: project[];
+};
+
+export function Carousel({ itemList }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   const goToPrev = () => emblaApi?.scrollPrev();
@@ -29,12 +33,20 @@ export function Carousel({ title, imgSrc, imgAltDesc }: CarouselProps) {
     <section className="embla">
       <article className="embla__viewport overflow-hidden" ref={emblaRef}>
         <section className="embla__container flex flex-row touch-pan-y touch-pinch-zoom">
-          <article className="embla__slide basis-full min-w-0 grow-0 shrink-0">
-            <article className="relative w-auto h-20">
-              <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
+          {itemList.map((item, id) => (
+            <article key={id} className="embla__slide basis-full min-w-0 grow-0 shrink-0">
+              <article className="relative w-auto h-20">
+                <Image
+                  className="object-cover"
+                  src={item.imgSrc}
+                  alt={item.imgAltDesc}
+                  fill={true}
+                  priority
+                />
+              </article>
+              <p>{item.title}</p>
             </article>
-            <p>{title}</p>
-          </article>
+          ))}
         </section>
       </article>
       <article>
