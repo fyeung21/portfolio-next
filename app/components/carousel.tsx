@@ -5,6 +5,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 export type project = {
   title: string;
@@ -32,8 +34,8 @@ export function Carousel({ itemList }: CarouselProps) {
   }, [emblaApi]);
 
   return (
-    <section className="embla">
-      <article className="embla__viewport overflow-hidden py-4" ref={emblaRef}>
+    <section className="embla relative">
+      <article className="embla__viewport overflow-hidden py-4 w-180 m-auto" ref={emblaRef}>
         <section className="embla__container flex flex-row touch-pan-y touch-pinch-zoom">
           {itemList.map((item, id) => (
             <article key={id} className="embla__slide basis-64 grow-0 shrink-0 mx-4">
@@ -53,14 +55,16 @@ export function Carousel({ itemList }: CarouselProps) {
           ))}
         </section>
       </article>
-      <article>
-        <button className="embla__prev border-2" onClick={goToPrev}>
-          Scroll to prev
-        </button>
-        <button className="embla__next border-2" onClick={goToNext}>
-          Scroll to next
-        </button>
-      </article>
+      <button
+        className="embla__prev ring-2 rounded-2xl shadow-inset p-2 hover:shadow-inset-fill hover:text-amber-400 absolute left-0 top-18"
+        onClick={goToPrev}>
+        <ArrowLeftIcon className="size-10" />
+      </button>
+      <button
+        className="embla__next ring-2 rounded-2xl shadow-inset p-2 hover:shadow-inset-fill hover:stroke-amber-400 hover:text-amber-400 absolute right-0 top-18"
+        onClick={goToNext}>
+        <ArrowRightIcon className="size-10" />
+      </button>
     </section>
   );
 }
