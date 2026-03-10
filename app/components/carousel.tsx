@@ -19,7 +19,7 @@ export type CarouselProps = {
   itemList: project[];
 };
 
-export function Carousel({ itemList }: CarouselProps) {
+export default function Carousel({ itemList }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   const goToPrev = () => emblaApi?.scrollPrev();

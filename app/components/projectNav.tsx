@@ -1,6 +1,6 @@
 "use client";
 
-import { Carousel } from "@/app/components/carousel";
+import Carousel from "@/app/components/carousel";
 import { projectsList } from "@/public/lib/projectsList";
 import { useEffect } from "react";
 import AOS from "aos";
