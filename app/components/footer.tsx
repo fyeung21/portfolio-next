@@ -8,10 +8,14 @@ export default function Footer({ copyrightYear }: FooterProps) {
       <p className="text-sm lg:text-md">&copy; {copyrightYear} Fiona Yeung</p>
       <ul className="flex flex-row">
         <a href="https://ca.linkedin.com/">
-          <li className="px-2 hover:border-b-2 hover:border-gold-300">linkedin</li>
+          <li className="px-2">
+            <span className="hover:border-b-2 hover:border-gold-300">linkedin</span>
+          </li>
         </a>
         <a href="https://github.com/fyeung21">
-          <li className="pl-2 hover:border-b-2 hover:border-gold-300">github</li>
+          <li className="pl-2">
+            <span className="hover:border-b-2 hover:border-gold-300">github</span>
+          </li>
         </a>
       </ul>
     </footer>
