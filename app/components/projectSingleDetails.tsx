@@ -1,5 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import ExternalLink from "./externalLink";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export type keyFeature = {
   id: number;
@@ -44,33 +49,45 @@ export default function ProjectSingleDetails({
   screenshots,
   reflection,
 }: ProjectSingleProps) {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <>
-      <article className="relative h-60 overflow-hidden sm:h-70 md:h-80 lg:h-100">
-        <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
-      </article>
-      <section className="m-4 mb-10 md:mx-0">
-        <section className="sm:flex sm:flex-row sm:justify-between">
-          <article>
-            <h2 className="text-3xl my-4 lg:text-4xl">{title}</h2>
-            <p>{description}</p>
-            <article className="my-8 sm:mt-4">
-              <h3 className="text-xl capitalize sm:hidden">technologies</h3>
-              <ul className="list-inside list-none marker:content-['✦'] sm:flex sm:flex-row">
-                {technologies.map((technology, id) => (
-                  <li key={id}>
-                    <span className="mx-2 leading-8 italic">{technology}</span>
-                  </li>
-                ))}
-              </ul>
+      <section data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
+        <article className="relative h-60 overflow-hidden sm:h-70 md:h-80 lg:h-100">
+          <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
+        </article>
+        <section className="m-4 mb-10 md:mx-0">
+          <section className="sm:flex sm:flex-row sm:justify-between">
+            <article>
+              <h2 className="text-3xl my-4 lg:text-4xl">{title}</h2>
+              <p>{description}</p>
+              <article className="my-8 sm:mt-4">
+                <h3 className="text-xl capitalize sm:hidden">technologies</h3>
+                <ul className="list-inside list-none marker:content-['✦'] sm:flex sm:flex-row">
+                  {technologies.map((technology, id) => (
+                    <li key={id}>
+                      <span className="mx-2 leading-8 italic">{technology}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
             </article>
-          </article>
-          <article className="py-2 sm:my-4 sm:ml-4 md:px-4">
-            {url ? <ExternalLink url={url} label={"live site"} /> : null}
-            {github ? <ExternalLink url={github} label={"github"} /> : null}
-          </article>
+            <article className="py-2 sm:my-4 sm:ml-4 md:px-4">
+              {url ? <ExternalLink url={url} label={"live site"} /> : null}
+              {github ? <ExternalLink url={github} label={"github"} /> : null}
+            </article>
+          </section>
         </section>
-        <section className="my-12">
+        <section
+          className="my-12"
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="1500">
           <article className="border-b-2 border-gold-300 shadow-underline my-4">
             <h2 className="text-2xl my-2 lg:text-3xl">key features</h2>
           </article>
@@ -94,7 +111,7 @@ export default function ProjectSingleDetails({
             ))}
           </article>
         </section>
-        <section>
+        <section data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1000">
           <article className="border-b-2 border-gold-300 shadow-underline my-4">
             <h2 className="text-2xl my-2 lg:text-3xl">screenshots</h2>
           </article>
@@ -113,10 +130,12 @@ export default function ProjectSingleDetails({
             </article>
           ))}
         </section>
-        <article className="border-b-2 border-gold-300 shadow-underline my-4">
-          <h2 className="text-2xl my-2 lg:text-3xl">reflection</h2>
-        </article>
-        <p>{reflection}</p>
+        <section data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1000">
+          <article className="border-b-2 border-gold-300 shadow-underline my-4">
+            <h2 className="text-2xl my-2 lg:text-3xl">reflection</h2>
+          </article>
+          <article dangerouslySetInnerHTML={{ __html: reflection }} className="rich-text"></article>
+        </section>
       </section>
     </>
   );

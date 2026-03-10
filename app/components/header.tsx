@@ -2,12 +2,25 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Header() {
   const pathname = usePathname();
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <header className="font-sans m-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-220 lg:text-lg md:my-4">
+    <header
+      className="font-sans m-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-220 lg:text-lg md:my-4"
+      data-aos="fade-in"
+      data-aos-easing="ease-in"
+      data-aos-duration="1000">
       <Link href={"/"}>
         <article className="text-3xl lg:text-4xl">fiona.</article>
       </Link>
@@ -16,7 +29,7 @@ export default function Header() {
           <ul className="flex flex-row">
             <Link href="/">
               <li
-                className={`mx-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:shadow-underline [&.active]:font-bold ${pathname === "/" || "/work/" ? "active" : ""} hover:border-b-2 hover:border-gold-300`}>
+                className={`mx-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:shadow-underline [&.active]:font-bold ${pathname === "/" || pathname.includes("work") ? "active" : ""} hover:border-b-2 hover:border-gold-300`}>
                 work
               </li>
             </Link>
