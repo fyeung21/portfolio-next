@@ -4,11 +4,11 @@ export default function Contact() {
       <h2 className="text-2xl my-4 lg:text-3xl">contact me</h2>
       <p>
         Filling this form will send an email to me. You may also reach me through{" "}
-        <a href="https://ca.linkedin.com/" className="font-bold hover:underline">
+        <a href="https://ca.linkedin.com/" className="font-bold hover:underline" target="_blank">
           <span>linkedin</span>
         </a>{" "}
         or{" "}
-        <a href="https://github.com/fyeung21" className="font-bold hover:underline">
+        <a href="https://github.com/fyeung21" className="font-bold hover:underline" target="_blank">
           <span>github</span>
         </a>
         !
