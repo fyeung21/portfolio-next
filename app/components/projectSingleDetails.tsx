@@ -84,7 +84,7 @@ export default function ProjectSingleDetails({
           </section>
         </section>
         <section
-          className="my-12"
+          className="m-4 my-12"
           data-aos="fade-up"
           data-aos-easing="ease-in"
           data-aos-duration="1500">
@@ -111,7 +111,11 @@ export default function ProjectSingleDetails({
             ))}
           </article>
         </section>
-        <section data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1000">
+        <section
+          className="m-4"
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="1000">
           <article className="border-b-2 border-gold-300 shadow-underline my-4">
             <h2 className="text-2xl my-2 lg:text-3xl">screenshots</h2>
           </article>
@@ -130,7 +134,11 @@ export default function ProjectSingleDetails({
             </article>
           ))}
         </section>
-        <section data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1000">
+        <section
+          className="m-4"
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="1000">
           <article className="border-b-2 border-gold-300 shadow-underline my-4">
             <h2 className="text-2xl my-2 lg:text-3xl">reflection</h2>
           </article>
