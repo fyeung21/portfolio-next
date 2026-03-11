@@ -1,12 +1,10 @@
-"use client";
-
 import ProjectSingleDetails from "@/app/components/projectSingleDetails";
 import { projectsList } from "@/public/lib/projectsList";
 import ProjectNav from "@/app/components/projectNav";
 
 export default function ProjectSingle() {
   return (
-    <section className="max-w-100 m-auto sm:max-w-none md:w-180 lg:w-220">
+    <section>
       <ProjectSingleDetails
         title={projectsList[0].title}
         imgSrc={projectsList[0].imgSrc}

@@ -57,7 +57,11 @@ export default function ProjectSingleDetails({
 
   return (
     <>
-      <section data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
+      <section
+        className="max-w-100 m-auto sm:max-w-none md:w-180 lg:w-220"
+        data-aos="fade-up"
+        data-aos-easing="ease-in"
+        data-aos-duration="1500">
         <article className="relative h-60 overflow-hidden sm:h-70 md:h-80 lg:h-100">
           <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
         </article>
