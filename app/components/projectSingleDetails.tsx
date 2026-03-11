@@ -84,7 +84,7 @@ export default function ProjectSingleDetails({
           </section>
         </section>
         <section
-          className="m-4 my-12"
+          className="mx-4 my-12 md:mx-0"
           data-aos="fade-up"
           data-aos-easing="ease-in"
           data-aos-duration="1500">
@@ -112,7 +112,7 @@ export default function ProjectSingleDetails({
           </article>
         </section>
         <section
-          className="m-4"
+          className="mx-4 md:mx-0"
           data-aos="fade-up"
           data-aos-easing="ease-in"
           data-aos-duration="1000">
@@ -135,7 +135,7 @@ export default function ProjectSingleDetails({
           ))}
         </section>
         <section
-          className="m-4"
+          className="mx-4 md:mx-0"
           data-aos="fade-up"
           data-aos-easing="ease-in"
           data-aos-duration="1000">
