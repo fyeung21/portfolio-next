@@ -36,14 +36,16 @@ export default function ProjectCard({
       </Link>
       <section className="px-2 py-4 relative h-45">
         <h3 className="text-2xl">{title}</h3>
-        <p className=" my-2">{cardBrief}</p>
-        <ul className="flex flex-row justify-end">
-          {cardTech.map((techItem, id) => (
-            <li key={id} className="italic mr-2 last:mr-0">
-              {techItem}
-            </li>
-          ))}
-        </ul>
+        <p className="my-2">{cardBrief}</p>
+        <article className="absolute bottom-0 right-2">
+          <ul className="flex flex-row justify-end">
+            {cardTech.map((techItem, id) => (
+              <li key={id} className="italic mr-2 last:mr-0">
+                {techItem}
+              </li>
+            ))}
+          </ul>
+        </article>
       </section>
     </article>
   );
