@@ -65,27 +65,25 @@ export default function ProjectSingleDetails({
         <article className="relative h-60 overflow-hidden sm:h-70 md:h-80 lg:h-100">
           <Image className="object-cover" src={imgSrc} alt={imgAltDesc} fill={true} priority />
         </article>
-        <section className="m-4 mb-10 md:mx-0">
-          <section className="sm:flex sm:flex-row sm:justify-between">
-            <article>
-              <h2 className="text-3xl my-4 lg:text-4xl">{title}</h2>
-              <p>{description}</p>
-              <article className="my-8 sm:mt-4">
-                <h3 className="text-xl capitalize sm:hidden">technologies</h3>
-                <ul className="list-inside list-none marker:content-['✦'] sm:flex sm:flex-row">
-                  {technologies.map((technology, id) => (
-                    <li key={id}>
-                      <span className="mx-2 leading-8 italic">{technology}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
+        <section className="m-4 mb-8 sm:flex sm:flex-row sm:justify-between md:max-w-185 md:m-auto md:px-4 md:py-8">
+          <article>
+            <h2 className="text-3xl mb-4 lg:text-4xl">{title}</h2>
+            <p>{description}</p>
+            <article className="mt-8 sm:mt-4">
+              <h3 className="text-xl capitalize sm:hidden">technologies</h3>
+              <ul className="list-inside list-none marker:content-['✦'] sm:flex sm:flex-row">
+                {technologies.map((technology, id) => (
+                  <li key={id}>
+                    <span className="mx-2 leading-8 italic">{technology}</span>
+                  </li>
+                ))}
+              </ul>
             </article>
-            <article className="py-2 sm:my-4 sm:ml-4 md:px-4">
-              {url ? <ExternalLink url={url} label={"live site"} /> : null}
-              {github ? <ExternalLink url={github} label={"github"} /> : null}
-            </article>
-          </section>
+          </article>
+          <article className="my-2 sm:pl-8 sm:pr-1">
+            {url ? <ExternalLink url={url} label={"live site"} /> : null}
+            {github ? <ExternalLink url={github} label={"github"} /> : null}
+          </article>
         </section>
         <section
           className="mx-4 my-12 md:mx-0"
@@ -143,10 +141,12 @@ export default function ProjectSingleDetails({
           data-aos="fade-up"
           data-aos-easing="ease-in"
           data-aos-duration="1000">
-          <article className="border-b-2 border-gold-300 shadow-underline my-4">
+          <article className="border-b-2 border-gold-300 shadow-underline my-4 max-w-150 m-auto">
             <h2 className="text-2xl my-2 lg:text-3xl">reflection</h2>
           </article>
-          <article dangerouslySetInnerHTML={{ __html: reflection }} className="rich-text"></article>
+          <article
+            dangerouslySetInnerHTML={{ __html: reflection }}
+            className="rich-text max-w-150 m-auto"></article>
         </section>
       </section>
     </>
