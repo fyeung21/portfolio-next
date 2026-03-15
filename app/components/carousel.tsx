@@ -39,9 +39,11 @@ export default function Carousel({ itemList }: CarouselProps) {
       <article className="embla__viewport overflow-hidden py-4 " ref={emblaRef}>
         <section className="embla__container flex flex-row touch-pan-y touch-pinch-zoom">
           {itemList.map((item, id) => (
-            <article key={id} className="embla__slide basis-64 grow-0 shrink-0 mx-4 opacity-100">
+            <article
+              key={id}
+              className="embla__slide basis-64 lg:basis-84 grow-0 shrink-0 mx-4 opacity-100">
               <Link href={item.slug}>
-                <article className="relative h-40 rounded-2xl overflow-hidden hover:ring-3 hover:border-amber-200 hover:shadow-card">
+                <article className="relative h-40 lg:h-55 rounded-2xl overflow-hidden hover:ring-3 hover:border-amber-200 hover:shadow-card">
                   <Image
                     className="object-cover"
                     src={item.imgSrc}
