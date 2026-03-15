@@ -57,12 +57,12 @@ export default function Carousel({ itemList }: CarouselProps) {
         </section>
       </article>
       <button
-        className="embla__prev ring-2 rounded-2xl shadow-inset p-2 hover:shadow-inset-fill hover:text-amber-400 absolute left-0 top-18"
+        className="embla__prev ring-2 rounded-2xl shadow-inset p-2 absolute left-4 top-18 hover:ring-3 hover:shadow-inset-fill-less hover:text-amber-200"
         onClick={goToPrev}>
         <ArrowLeftIcon className="size-10" />
       </button>
       <button
-        className="embla__next ring-2 rounded-2xl shadow-inset p-2 hover:shadow-inset-fill hover:stroke-amber-400 hover:text-amber-400 absolute right-0 top-18"
+        className="embla__next ring-2 rounded-2xl shadow-inset p-2 absolute right-4 top-18 hover:ring-3 hover:shadow-inset-fill-less hover:text-amber-200"
         onClick={goToNext}>
         <ArrowRightIcon className="size-10" />
       </button>
