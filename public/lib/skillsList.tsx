@@ -2,7 +2,15 @@ export const skillsList = [
   {
     id: 0,
     title: "Front-end",
-    skills: ["HTML", "CSS", "Sass", "Tailwind CSS", "JavaScript", "React", "NextJS"],
+    skills: [
+      "HTML",
+      "CSS",
+      "Sass",
+      "Tailwind CSS",
+      "JavaScript",
+      "React",
+      "NextJS",
+    ],
   },
   {
     id: 1,
