@@ -7,11 +7,15 @@ export default function Footer({ copyrightYear }: FooterProps) {
     <footer className="font-sans m-4 md:py-4 flex flex-row items-center justify-between md:w-180 md:m-auto lg:w-220 lg:text-lg">
       <p className="text-sm lg:text-md">&copy; {copyrightYear} Fiona Yeung</p>
       <ul className="flex flex-row">
-        <a href="https://ca.linkedin.com/">
-          <li className="px-2 hover:border-b-2 hover:border-gold-300">linkedin</li>
+        <a href="https://ca.linkedin.com/" target="_blank">
+          <li className="px-2">
+            <span className="hover:border-b-2 hover:border-gold-300">linkedin</span>
+          </li>
         </a>
-        <a href="https://github.com/fyeung21">
-          <li className="pl-2 hover:border-b-2 hover:border-gold-300">github</li>
+        <a href="https://github.com/fyeung21" target="_blank">
+          <li className="pl-2">
+            <span className="hover:border-b-2 hover:border-gold-300">github</span>
+          </li>
         </a>
       </ul>
     </footer>

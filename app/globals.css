@@ -5,8 +5,10 @@
   --foreground: #ffebaa;
   --gold-300: var(--foreground);
   --underline-glow: 0px 10px 10px -8px rgba(255, 235, 170, 0.8);
+  --card-glow: 0px 10px 10px -5px rgba(255, 235, 170, 0.8);
   --inset-glow: inset 0px 0px 15px 0px rgba(255, 235, 170, 0.8);
-  --inset-fill-glow: inset 0px 0px 30px 10px rgba(255, 235, 170, 0.8);
+  --inset-fill-glow: inset 0px 0px 30px 8px rgba(255, 235, 170, 0.8);
+  --inset-fill-less-glow: inset 0px 0px 20px 8px rgba(255, 235, 170, 0.8);
 }
 
 @theme inline {
@@ -15,8 +17,10 @@
   --font-sans: var(--font-poppins);
   --color-gold-300: var(--gold-300);
   --shadow-underline: var(--underline-glow);
+  --shadow-card: var(--card-glow);
   --shadow-inset: var(--inset-glow);
   --shadow-inset-fill: var(--inset-fill-glow);
+  --shadow-inset-fill-less: var(--inset-fill-less-glow);
 }
 
 body {
@@ -55,4 +59,12 @@ body {
 .rich-text h4 {
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+.embla__slide {
+  transition: opacity 0.2s ease-in-out;
+}
+.embla__slide:not(.is-snapped) {
+  opacity: 0.16;
+  pointer-events: none;
 }
