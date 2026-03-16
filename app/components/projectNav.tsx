@@ -15,11 +15,14 @@ export default function ProjectNav() {
 
   return (
     <section
-      className="max-w-200 my-16 m-auto sm:max-w-none md:w-180 lg:w-220"
+      className="m-auto my-16 max-w-200 sm:max-w-none md:w-180 lg:w-220"
       data-aos="fade-in"
       data-aos-easing="ease-in"
-      data-aos-duration="1000">
-      <h2 className="text-2xl my-2 mx-4 font-bold italic md:mx-0">my other work</h2>
+      data-aos-duration="1000"
+    >
+      <h2 className="mx-4 my-2 text-2xl font-bold italic md:mx-0">
+        my other work
+      </h2>
       <Carousel itemList={projectsList} />
     </section>
   );

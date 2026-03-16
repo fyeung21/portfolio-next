@@ -36,14 +36,15 @@ export default function Carousel({ itemList }: CarouselProps) {
 
   return (
     <section className="embla relative">
-      <article className="embla__viewport overflow-hidden py-4 " ref={emblaRef}>
-        <section className="embla__container flex flex-row touch-pan-y touch-pinch-zoom">
+      <article className="embla__viewport overflow-hidden py-4" ref={emblaRef}>
+        <section className="embla__container flex touch-pan-y touch-pinch-zoom flex-row">
           {itemList.map((item, id) => (
             <article
               key={id}
-              className="embla__slide basis-64 lg:basis-84 grow-0 shrink-0 mx-4 opacity-100">
+              className="embla__slide mx-4 shrink-0 grow-0 basis-64 opacity-100 lg:basis-84"
+            >
               <Link href={item.slug}>
-                <article className="relative h-40 lg:h-55 rounded-2xl overflow-hidden hover:ring-3 hover:border-amber-200 hover:shadow-card">
+                <article className="relative h-40 overflow-hidden rounded-2xl hover:border-amber-200 hover:shadow-card hover:ring-3 lg:h-55">
                   <Image
                     className="object-cover"
                     src={item.imgSrc}
@@ -52,20 +53,22 @@ export default function Carousel({ itemList }: CarouselProps) {
                     priority
                   />
                 </article>
-                <h3 className="text-2xl m-2">{item.title}</h3>
+                <h3 className="m-2 text-2xl">{item.title}</h3>
               </Link>
             </article>
           ))}
         </section>
       </article>
       <button
-        className="embla__prev ring-2 rounded-2xl shadow-inset p-2 absolute left-4 top-18 hover:ring-3 hover:shadow-inset-fill-less hover:text-amber-200"
-        onClick={goToPrev}>
+        className="embla__prev absolute top-18 left-4 rounded-2xl p-2 shadow-inset ring-2 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3"
+        onClick={goToPrev}
+      >
         <ArrowLeftIcon className="size-10" />
       </button>
       <button
-        className="embla__next ring-2 rounded-2xl shadow-inset p-2 absolute right-4 top-18 hover:ring-3 hover:shadow-inset-fill-less hover:text-amber-200"
-        onClick={goToNext}>
+        className="embla__next absolute top-18 right-4 rounded-2xl p-2 shadow-inset ring-2 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3"
+        onClick={goToNext}
+      >
         <ArrowRightIcon className="size-10" />
       </button>
     </section>

@@ -16,18 +16,20 @@ export default function Home() {
   }, []);
   return (
     <section
-      className="m-4 sm:w-120 sm:m-auto md:w-180 lg:w-220"
+      className="m-4 sm:m-auto sm:w-120 md:w-180 lg:w-220"
       data-aos="fade-up"
       data-aos-easing="ease-in"
-      data-aos-duration="1500">
-      <section className="my-10 py-8 px-4 max-w-100 m-auto sm:max-w-none sm:w-160">
+      data-aos-duration="1500"
+    >
+      <section className="m-auto my-10 max-w-100 px-4 py-8 sm:w-160 sm:max-w-none">
         <p>
-          "Hi there! My name is Fiona and I am a front-end web developer who takes great interest in
-          learning how to write clear and efficient modular code. Please hover over and click on the
-          thumbnails below to check out my projects!"
+          "Hi there! My name is Fiona and I am a front-end web developer who
+          takes great interest in learning how to write clear and efficient
+          modular code. Please hover over and click on the thumbnails below to
+          check out my projects!"
         </p>
       </section>
-      <section className="my-12 max-w-100 m-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8 lg:gap-16 lg:gap-x-24">
+      <section className="m-auto my-12 max-w-100 md:grid md:max-w-none md:grid-cols-2 md:gap-8 lg:gap-16 lg:gap-x-24">
         {projectsList.length !== 0 ? (
           <>
             {projectsList.map((project, id) => (

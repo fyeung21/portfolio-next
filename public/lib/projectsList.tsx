@@ -4,7 +4,8 @@ export const projectsList = [
     title: "Catch Oscar",
     imgSrc: "/dose-juice.jpg",
     imgAltDesc: "thumbnail image of catch oscar project",
-    cardBrief: "game that has 9 holes where different neighbourhood cats could appear out of.",
+    cardBrief:
+      "game that has 9 holes where different neighbourhood cats could appear out of.",
     cardTech: ["JavaScript", "jQuery"],
     slug: "catch-oscar",
     description:
@@ -78,8 +79,18 @@ export const projectsList = [
       },
     ],
     screenshots: [
-      { id: 0, imgSrc: "/dose-juice.jpg", imgAltDesc: "", caption: "home page" },
-      { id: 1, imgSrc: "/dose-juice.jpg", imgAltDesc: "", caption: "about page" },
+      {
+        id: 0,
+        imgSrc: "/dose-juice.jpg",
+        imgAltDesc: "",
+        caption: "home page",
+      },
+      {
+        id: 1,
+        imgSrc: "/dose-juice.jpg",
+        imgAltDesc: "",
+        caption: "about page",
+      },
     ],
     reflection:
       "From this project I learned a lot about DOM manipulation, array manipulation, and string interpolation. There were also logic questions I did not know I had to clarify like what happens when randomizing produces the same result as the last result. Not only did I learn how to develop this kind of reaction game, I also learned a little about how designing a game works and how to properly communicate it.",
@@ -89,7 +100,8 @@ export const projectsList = [
     title: "Catch Oscar",
     imgSrc: "/dose-juice.jpg",
     imgAltDesc: "thumbnail image of catch oscar project",
-    cardBrief: "game that has 9 holes where different neighbourhood cats could appear out of.",
+    cardBrief:
+      "game that has 9 holes where different neighbourhood cats could appear out of.",
     cardTech: ["JavaScript", "jQuery"],
     slug: "catch-oscar",
     description:
@@ -163,8 +175,18 @@ export const projectsList = [
       },
     ],
     screenshots: [
-      { id: 0, imgSrc: "/dose-juice.jpg", imgAltDesc: "", caption: "home page" },
-      { id: 1, imgSrc: "/dose-juice.jpg", imgAltDesc: "", caption: "about page" },
+      {
+        id: 0,
+        imgSrc: "/dose-juice.jpg",
+        imgAltDesc: "",
+        caption: "home page",
+      },
+      {
+        id: 1,
+        imgSrc: "/dose-juice.jpg",
+        imgAltDesc: "",
+        caption: "about page",
+      },
     ],
     reflection:
       "From this project I learned a lot about DOM manipulation, array manipulation, and string interpolation. There were also logic questions I did not know I had to clarify like what happens when randomizing produces the same result as the last result. Not only did I learn how to develop this kind of reaction game, I also learned a little about how designing a game works and how to properly communicate it.",
@@ -174,7 +196,8 @@ export const projectsList = [
     title: "Catch Oscar",
     imgSrc: "/dose-juice.jpg",
     imgAltDesc: "thumbnail image of catch oscar project",
-    cardBrief: "game that has 9 holes where different neighbourhood cats could appear out of.",
+    cardBrief:
+      "game that has 9 holes where different neighbourhood cats could appear out of.",
     cardTech: ["JavaScript", "jQuery"],
     slug: "catch-oscar",
     description:
@@ -248,8 +271,18 @@ export const projectsList = [
       },
     ],
     screenshots: [
-      { id: 0, imgSrc: "/dose-juice.jpg", imgAltDesc: "", caption: "home page" },
-      { id: 1, imgSrc: "/dose-juice.jpg", imgAltDesc: "", caption: "about page" },
+      {
+        id: 0,
+        imgSrc: "/dose-juice.jpg",
+        imgAltDesc: "",
+        caption: "home page",
+      },
+      {
+        id: 1,
+        imgSrc: "/dose-juice.jpg",
+        imgAltDesc: "",
+        caption: "about page",
+      },
     ],
     reflection:
       "From this project I learned a lot about DOM manipulation, array manipulation, and string interpolation. There were also logic questions I did not know I had to clarify like what happens when randomizing produces the same result as the last result. Not only did I learn how to develop this kind of reaction game, I also learned a little about how designing a game works and how to properly communicate it.",
