@@ -1,3 +1,5 @@
+import ContactForm from "../components/contactForm";
+
 export default function Contact() {
   return (
     <section className="mx-4 my-20 px-4 sm:mx-auto sm:w-120 md:w-180 lg:w-220">
@@ -23,7 +25,7 @@ export default function Contact() {
         !
       </p>
       <article className="my-4">
-        <p>contact form here</p>
+        <ContactForm />
       </article>
     </section>
   );
