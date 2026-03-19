@@ -6,15 +6,15 @@ const list = [
 
 export default function ContactForm() {
   return (
-    <section className="m-auto rounded-xl px-8 py-4 shadow-inset ring-2">
+    <section className="m-auto rounded-xl px-8 py-4 text-sm shadow-inset ring-2 sm:w-140">
       <form name="contact" method="POST" data-netlify="true">
         {list.map((item, id) => (
-          <p key={id} className="my-4 flex flex-col">
+          <p key={id} className="my-4 flex flex-col sm:w-80">
             <label className="mb-2 font-semibold">{item.label}</label>
             <input
               type={item.type}
               name={item.name}
-              className="rounded-xl p-2 ring-2 focus:shadow-inset focus-visible:ring-4 focus-visible:ring-amber-200"
+              className="rounded-xl p-2 ring-2 focus:shadow-inset focus-visible:ring-4 focus-visible:ring-amber-200 lg:text-lg"
             />
           </p>
         ))}
@@ -22,7 +22,7 @@ export default function ContactForm() {
           <label className="my-2 font-semibold">message</label>
           <textarea
             name="message"
-            className="h-40 rounded-xl p-2 ring-2 focus:shadow-inset focus-visible:ring-4 focus-visible:ring-amber-200"
+            className="h-40 rounded-xl p-2 ring-2 focus:shadow-inset focus-visible:ring-4 focus-visible:ring-amber-200 lg:text-lg"
           ></textarea>
         </p>
         <p className="flex justify-center">

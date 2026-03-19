@@ -3,7 +3,7 @@ import ContactForm from "../components/contactForm";
 export default function Contact() {
   return (
     <section className="mb-20">
-      <article className="mx-4 my-20 px-4 sm:mx-auto sm:w-120 md:w-180 lg:w-220">
+      <article className="mx-4 mt-20 mb-12 px-4 sm:mx-auto sm:w-120 md:w-180 lg:mb-20 lg:w-220">
         <h2 className="my-4 text-2xl lg:text-3xl">contact me</h2>
         <p>
           Filling this form will send an email to me. You may also reach me
