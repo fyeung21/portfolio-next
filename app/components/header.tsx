@@ -30,16 +30,16 @@ export default function Header() {
           <ul className="flex flex-row">
             <Link href="/">
               <li
-                className={`mx-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:font-bold [&.active]:shadow-underline ${pathname === "/" || pathname.includes("work") ? "active" : ""} hover:border-b-2 hover:border-gold-300`}
+                className={`mx-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:font-bold [&.active]:shadow-underline ${pathname === "/" || pathname.includes("work") ? "active" : ""} duration-200 ease-in-out hover:border-b-2 hover:border-gold-300 hover:transition-all hover:duration-200 hover:ease-in-out`}
               >
-                work
+                <span>work</span>
               </li>
             </Link>
             <Link href="/contact">
               <li
-                className={`ml-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:font-bold [&.active]:shadow-underline ${pathname === "/contact" ? "active" : ""} hover:border-b-2 hover:border-gold-300`}
+                className={`ml-2 [&.active]:border-b-2 [&.active]:border-gold-300 [&.active]:font-bold [&.active]:shadow-underline ${pathname === "/contact" ? "active" : ""} duration-200 ease-in-out hover:border-b-2 hover:border-gold-300 hover:transition-all hover:duration-200 hover:ease-in-out`}
               >
-                contact
+                <span>contact</span>
               </li>
             </Link>
           </ul>
