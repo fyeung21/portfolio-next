@@ -9,14 +9,14 @@ export default function Footer({ copyrightYear }: FooterProps) {
       <ul className="flex flex-row">
         <a href="https://ca.linkedin.com/" target="_blank">
           <li className="px-2">
-            <span className="hover:border-b-2 hover:border-gold-300">
+            <span className="duration-200 ease-in-out hover:border-b-2 hover:border-gold-300 hover:transition-all hover:duration-200 hover:ease-in-out">
               linkedin
             </span>
           </li>
         </a>
         <a href="https://github.com/fyeung21" target="_blank">
           <li className="pl-2">
-            <span className="hover:border-b-2 hover:border-gold-300">
+            <span className="duration-200 ease-in-out hover:border-b-2 hover:border-gold-300 hover:transition-all hover:duration-200 hover:ease-in-out">
               github
             </span>
           </li>
