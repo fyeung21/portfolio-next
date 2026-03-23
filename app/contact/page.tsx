@@ -1,8 +1,23 @@
+"use client";
+
+import { useEffect } from "react";
 import ContactForm from "../components/contactForm";
+import AOS from "aos";
 
 export default function Contact() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <section className="mb-20">
+    <section
+      className="mb-20"
+      data-aos="fade-up"
+      data-aos-easing="ease-in"
+      data-aos-duration="1200"
+    >
       <article className="mx-4 mt-20 mb-12 px-4 sm:mx-auto sm:w-120 md:w-180 lg:mb-20 lg:w-220">
         <h2 className="my-4 text-2xl lg:text-3xl">contact me</h2>
         <p>
