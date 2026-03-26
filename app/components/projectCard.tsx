@@ -30,9 +30,9 @@ export default function ProjectCard({
   return (
     <article className="py-2">
       <Link href={`/work/${slug}`}>
-        <section className="relative h-50 w-auto overflow-hidden rounded-2xl hover:border-amber-200 hover:shadow-card hover:ring-3 lg:h-60">
+        <section className="relative h-50 w-auto overflow-hidden rounded-2xl duration-400 ease-in hover:border-amber-200 hover:shadow-card hover:ring-3 hover:transition-all hover:duration-400 hover:ease-out lg:h-60">
           <Image
-            className="object-cover"
+            className="object-cover duration-500 ease-in hover:scale-105 hover:transition-all hover:duration-400 hover:ease-out"
             src={imgSrc}
             alt={imgAltDesc}
             fill={true}
