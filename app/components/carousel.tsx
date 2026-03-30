@@ -44,9 +44,10 @@ export default function Carousel({ itemList }: CarouselProps) {
               className="embla__slide mx-4 shrink-0 grow-0 basis-64 opacity-100 lg:basis-84"
             >
               <Link href={item.slug}>
-                <article className="relative h-40 overflow-hidden rounded-2xl duration-400 ease-in hover:border-amber-200 hover:shadow-card hover:ring-3 hover:transition-all hover:duration-400 hover:ease-out lg:h-55">
+                <section className="group">
+                  <article className="relative h-40 overflow-hidden rounded-2xl duration-400 ease-in group-hover:border-amber-200 group-hover:shadow-card group-hover:ring-3 group-hover:transition-all group-hover:duration-400 group-hover:ease-out lg:h-55">
                   <Image
-                    className="object-cover duration-400 ease-in hover:scale-105 hover:transition-all hover:duration-400 hover:ease-out"
+                      className="object-cover duration-400 ease-in group-hover:scale-105 group-hover:transition-all group-hover:duration-400 group-hover:ease-out"
                     src={item.imgSrc}
                     alt={item.imgAltDesc}
                     fill={true}
@@ -54,6 +55,7 @@ export default function Carousel({ itemList }: CarouselProps) {
                   />
                 </article>
                 <h3 className="m-2 text-2xl">{item.title}</h3>
+                </section>
               </Link>
             </article>
           ))}
