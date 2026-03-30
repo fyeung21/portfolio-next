@@ -46,15 +46,15 @@ export default function Carousel({ itemList }: CarouselProps) {
               <Link href={item.slug}>
                 <section className="group">
                   <article className="relative h-40 overflow-hidden rounded-2xl duration-400 ease-in group-hover:border-amber-200 group-hover:shadow-card group-hover:ring-3 group-hover:transition-all group-hover:duration-400 group-hover:ease-out lg:h-55">
-                  <Image
+                    <Image
                       className="object-cover duration-400 ease-in group-hover:scale-105 group-hover:transition-all group-hover:duration-400 group-hover:ease-out"
-                    src={item.imgSrc}
-                    alt={item.imgAltDesc}
-                    fill={true}
-                    priority
-                  />
-                </article>
-                <h3 className="m-2 text-2xl">{item.title}</h3>
+                      src={item.imgSrc}
+                      alt={item.imgAltDesc}
+                      fill={true}
+                      priority
+                    />
+                  </article>
+                  <h3 className="m-2 text-2xl">{item.title}</h3>
                 </section>
               </Link>
             </article>
