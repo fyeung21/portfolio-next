@@ -62,13 +62,13 @@ export default function Carousel({ itemList }: CarouselProps) {
         </section>
       </article>
       <button
-        className="embla__prev absolute top-18 left-4 rounded-2xl p-2 shadow-inset ring-2 duration-200 ease-in hover:scale-105 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3 hover:transition-all hover:duration-200 hover:ease-out"
+        className="embla__prev absolute top-18 left-4 rounded-2xl p-2 shadow-inset ring-2 duration-200 ease-in hover:scale-105 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3 hover:transition-all hover:duration-200 hover:ease-out lg:top-25 lg:left-30"
         onClick={goToPrev}
       >
         <ArrowLeftIcon className="size-10" />
       </button>
       <button
-        className="embla__next absolute top-18 right-4 rounded-2xl p-2 shadow-inset ring-2 duration-200 ease-in hover:scale-105 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3 hover:transition-all hover:duration-200 hover:ease-out"
+        className="embla__next absolute top-18 right-4 rounded-2xl p-2 shadow-inset ring-2 duration-200 ease-in hover:scale-105 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3 hover:transition-all hover:duration-200 hover:ease-out lg:top-25 lg:right-30"
         onClick={goToNext}
       >
         <ArrowRightIcon className="size-10" />
