@@ -46,7 +46,7 @@ export default function Carousel({ itemList }: CarouselProps) {
               <Link href={item.slug}>
                 <article className="relative h-40 overflow-hidden rounded-2xl duration-400 ease-in hover:border-amber-200 hover:shadow-card hover:ring-3 hover:transition-all hover:duration-400 hover:ease-out lg:h-55">
                   <Image
-                    className="object-cover duration-500 ease-in hover:scale-105 hover:transition-all hover:duration-400 hover:ease-out"
+                    className="object-cover duration-400 ease-in hover:scale-105 hover:transition-all hover:duration-400 hover:ease-out"
                     src={item.imgSrc}
                     alt={item.imgAltDesc}
                     fill={true}
@@ -60,13 +60,13 @@ export default function Carousel({ itemList }: CarouselProps) {
         </section>
       </article>
       <button
-        className="embla__prev absolute top-18 left-4 rounded-2xl p-2 shadow-inset ring-2 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3"
+        className="embla__prev absolute top-18 left-4 rounded-2xl p-2 shadow-inset ring-2 duration-200 ease-in hover:scale-105 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3 hover:transition-all hover:duration-200 hover:ease-out"
         onClick={goToPrev}
       >
         <ArrowLeftIcon className="size-10" />
       </button>
       <button
-        className="embla__next absolute top-18 right-4 rounded-2xl p-2 shadow-inset ring-2 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3"
+        className="embla__next absolute top-18 right-4 rounded-2xl p-2 shadow-inset ring-2 duration-200 ease-in hover:scale-105 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3 hover:transition-all hover:duration-200 hover:ease-out"
         onClick={goToNext}
       >
         <ArrowRightIcon className="size-10" />
