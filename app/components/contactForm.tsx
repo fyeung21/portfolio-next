@@ -11,7 +11,7 @@ export default function ContactForm() {
         {list.map((item, id) => (
           <p
             key={id}
-            className="mt-4 mb-6 flex max-w-80 flex-col sm:w-80 sm:max-w-none"
+            className="mt-4 mb-6 flex max-w-80 flex-col sm:w-80 sm:max-w-none md:my-6"
           >
             <label className="mb-2 font-semibold">{item.label}</label>
             <input
