@@ -14,7 +14,7 @@ export default function ContactForm() {
             <input
               type={item.type}
               name={item.name}
-              className="rounded-xl p-2 ring-2 focus:shadow-inset focus-visible:ring-4 focus-visible:ring-amber-200 lg:text-lg"
+              className="rounded-xl p-2 text-gold-300 ring-2 duration-300 ease-in hover:shadow-card hover:ring-3 hover:transition-all hover:duration-300 hover:ease-out focus-visible:shadow-card focus-visible:ring-3 lg:text-lg"
             />
           </p>
         ))}
@@ -22,7 +22,7 @@ export default function ContactForm() {
           <label className="my-2 font-semibold">message</label>
           <textarea
             name="message"
-            className="h-40 rounded-xl p-2 ring-2 focus:shadow-inset focus-visible:ring-4 focus-visible:ring-amber-200 lg:text-lg"
+            className="h-40 rounded-xl p-2 text-gold-300 ring-2 duration-300 ease-in hover:shadow-card hover:ring-3 hover:transition-all hover:duration-300 hover:ease-out focus-visible:ring-3 lg:text-lg"
           ></textarea>
         </p>
         <p className="flex justify-center">
