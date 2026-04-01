@@ -6,10 +6,13 @@ const list = [
 
 export default function ContactForm() {
   return (
-    <section className="m-auto rounded-xl px-8 py-4 text-sm shadow-inset ring-2 sm:w-140">
+    <section className="m-auto max-w-110 rounded-xl px-4 py-4 text-sm md:w-140 md:max-w-none md:px-8 md:shadow-inset md:ring-2">
       <form name="contact" method="POST" data-netlify="true">
         {list.map((item, id) => (
-          <p key={id} className="my-4 flex flex-col sm:w-80">
+          <p
+            key={id}
+            className="mt-4 mb-6 flex max-w-80 flex-col sm:w-80 sm:max-w-none"
+          >
             <label className="mb-2 font-semibold">{item.label}</label>
             <input
               type={item.type}
