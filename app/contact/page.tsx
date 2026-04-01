@@ -18,7 +18,7 @@ export default function Contact() {
       data-aos-easing="ease-in"
       data-aos-duration="1200"
     >
-      <article className="mx-4 mt-20 mb-12 px-4 sm:mx-auto sm:w-120 md:w-180 lg:mb-20 lg:w-220">
+      <article className="m-auto mt-10 mb-4 max-w-110 p-4 sm:w-140 sm:max-w-none md:mb-8 md:w-160 lg:mb-20">
         <h2 className="my-4 text-2xl lg:text-3xl">contact me</h2>
         <p>
           Filling this form will send an email to me. You may also reach me
