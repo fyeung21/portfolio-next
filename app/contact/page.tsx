@@ -25,18 +25,22 @@ export default function Contact() {
           through{" "}
           <a
             href="https://ca.linkedin.com/"
-            className="font-bold hover:underline"
+            className="font-bold text-amber-300"
             target="_blank"
           >
-            <span>linkedin</span>
+            <span className="duration-200 ease-in hover:border-b-2 hover:transition-all hover:duration-200 hover:ease-out">
+              linkedin
+            </span>
           </a>{" "}
           or{" "}
           <a
             href="https://github.com/fyeung21"
-            className="font-bold hover:underline"
+            className="font-bold text-amber-300"
             target="_blank"
           >
-            <span>github</span>
+            <span className="duration-200 ease-in hover:border-b-2 hover:transition-all hover:duration-200 hover:ease-out">
+              github
+            </span>
           </a>
           !
         </p>
