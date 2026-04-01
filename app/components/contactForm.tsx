@@ -30,7 +30,7 @@ export default function ContactForm() {
         </p>
         <p className="flex justify-center">
           <button
-            className="m-auto mt-10 mb-8 w-40 rounded-xl py-2 text-center text-lg font-semibold shadow-inset ring-2 duration-300 ease-out hover:shadow-inset-fill hover:ring-3 hover:transition-all hover:duration-300 hover:ease-in hover:text-shadow-indigo-950 hover:text-shadow-md"
+            className="m-auto mt-10 mb-8 w-40 rounded-xl py-2 text-center text-lg font-semibold shadow-inset ring-2 duration-200 ease-out hover:scale-105 hover:shadow-inset-fill hover:ring-3 hover:transition-all hover:duration-200 hover:ease-in hover:text-shadow-indigo-950 hover:text-shadow-md"
             type="submit"
           >
             send
