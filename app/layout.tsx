@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import FloatingParticles from "./components/floatingParticles";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header />
         <main className="font-sans lg:text-lg">{children}</main>
         <Footer copyrightYear={"2026"} />
+        <FloatingParticles />
       </body>
     </html>
   );
