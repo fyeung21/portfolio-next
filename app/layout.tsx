@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${poppins.variable} relative antialiased`}>
         <Header />
         <main className="font-sans lg:text-lg">{children}</main>
         <Footer copyrightYear={"2026"} />

@@ -5,7 +5,7 @@ export default function FloatingParticles() {
       <article className="particle p2"></article>
       <article className="particle p3 glow"></article>
       <article className="particle p4"></article>
-      <article className="particle p5glow"></article>
+      <article className="particle p5 glow"></article>
     </section>
   );
 }
