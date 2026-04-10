@@ -4,23 +4,13 @@ import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import ClassNames from "embla-carousel-class-names";
+import { projectsList } from "@/public/lib/projectsList";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
-export type project = {
-  title: string;
-  imgSrc: string;
-  imgAltDesc: string;
-  slug: string;
-};
-
-export type CarouselProps = {
-  itemList: project[];
-};
-
-export default function Carousel({ itemList }: CarouselProps) {
+export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [ClassNames()]);
 
   const goToPrev = () => emblaApi?.scrollPrev();
@@ -38,25 +28,29 @@ export default function Carousel({ itemList }: CarouselProps) {
     <section className="embla relative">
       <article className="embla__viewport overflow-hidden py-4" ref={emblaRef}>
         <section className="embla__container flex touch-pan-y touch-pinch-zoom flex-row">
-          {itemList.map((item, id) => (
-            <article
-              key={id}
-              className="embla__slide mx-4 shrink-0 grow-0 basis-64 opacity-100 lg:basis-84"
-            >
-              <Link href={item.slug}>
-                <article className="relative h-40 overflow-hidden rounded-2xl hover:border-amber-200 hover:shadow-card hover:ring-3 lg:h-55">
-                  <Image
-                    className="object-cover"
-                    src={item.imgSrc}
-                    alt={item.imgAltDesc}
-                    fill={true}
-                    priority
-                  />
+          {projectsList !== null ? (
+            <>
+              {Object.values(projectsList).map((project, id) => (
+                <article
+                  key={id}
+                  className="embla__slide mx-4 shrink-0 grow-0 basis-64 opacity-100 lg:basis-84"
+                >
+                  <Link href={project.slug}>
+                    <article className="relative h-40 overflow-hidden rounded-2xl hover:border-amber-200 hover:shadow-card hover:ring-3 lg:h-55">
+                      <Image
+                        className="object-cover"
+                        src={project.imgSrc}
+                        alt={project.imgAltDesc}
+                        fill={true}
+                        priority
+                      />
+                    </article>
+                    <h3 className="m-2 text-2xl">{project.title}</h3>
+                  </Link>
                 </article>
-                <h3 className="m-2 text-2xl">{item.title}</h3>
-              </Link>
-            </article>
-          ))}
+              ))}
+            </>
+          ) : null}
         </section>
       </article>
       <button
