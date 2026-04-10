@@ -13,16 +13,16 @@ export type Project = {
   title: string;
   imgSrc: string;
   imgAltDesc: string;
-  cardBrief: string;
-  cardTech: string[];
+  cardBrief?: string;
+  cardTech?: string[];
   slug: string;
-  description: string;
-  url: string;
-  github: string;
-  technologies: string[];
-  keyFeatures: keyFeature[];
-  screenshots: screenshot[];
-  reflection: string;
+  description?: string;
+  url?: string;
+  github?: string;
+  technologies?: string[];
+  keyFeatures?: keyFeature[];
+  screenshots?: screenshot[];
+  reflection?: string;
 };
 export type ProjectList = {
   name: Project;
