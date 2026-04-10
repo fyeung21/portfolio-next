@@ -1,3 +1,33 @@
+export type keyFeature = {
+  imgSrc: string;
+  imgAltDesc: string;
+  title: string;
+  description: string;
+};
+export type screenshot = {
+  imgSrc: string;
+  imgAltDesc: string;
+  caption: string;
+};
+export type Project = {
+  title: string;
+  imgSrc: string;
+  imgAltDesc: string;
+  cardBrief: string;
+  cardTech: string[];
+  slug: string;
+  description: string;
+  url: string;
+  github: string;
+  technologies: string[];
+  keyFeatures: keyFeature[];
+  screenshots: screenshot[];
+  reflection: string;
+};
+export type ProjectList = {
+  name: Project;
+};
+
 export const projectsList = {
   "catch-oscar": {
     title: "Catch Oscar",
