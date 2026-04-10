@@ -5,7 +5,6 @@ import SkillsContainer from "./components/skillsContainer";
 import { projectsList } from "@/public/lib/projectsList";
 import ProjectCard from "./components/projectCard";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -35,7 +34,6 @@ export default function Home() {
             {Object.values(projectsList).map((project, id) => (
               <ProjectCard
                 key={id}
-                id={project.id}
                 title={project.title}
                 imgSrc={project.imgSrc}
                 imgAltDesc={project.imgAltDesc}
