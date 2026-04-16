@@ -28,29 +28,25 @@ export default function Carousel() {
     <section className="embla relative">
       <article className="embla__viewport overflow-hidden py-4" ref={emblaRef}>
         <section className="embla__container flex touch-pan-y touch-pinch-zoom flex-row">
-          {projectsList !== null ? (
-            <>
-              {Object.values(projectsList).map((project, id) => (
-                <article
-                  key={id}
-                  className="embla__slide mx-4 shrink-0 grow-0 basis-64 opacity-100 lg:basis-84"
-                >
-                  <Link href={project.slug}>
-                    <article className="relative h-40 overflow-hidden rounded-2xl hover:border-amber-200 hover:shadow-card hover:ring-3 lg:h-55">
-                      <Image
-                        className="object-cover"
-                        src={project.imgSrc}
-                        alt={project.imgAltDesc}
-                        fill={true}
-                        priority
-                      />
-                    </article>
-                    <h3 className="m-2 text-2xl">{project.title}</h3>
-                  </Link>
+          {Object.values(projectsList).map((project, id) => (
+            <article
+              key={id}
+              className="embla__slide mx-4 shrink-0 grow-0 basis-64 opacity-100 lg:basis-84"
+            >
+              <Link href={project.slug}>
+                <article className="relative h-40 overflow-hidden rounded-2xl hover:border-amber-200 hover:shadow-card hover:ring-3 lg:h-55">
+                  <Image
+                    className="object-cover"
+                    src={project.imgSrc}
+                    alt={project.imgAltDesc}
+                    fill={true}
+                    priority
+                  />
                 </article>
-              ))}
-            </>
-          ) : null}
+                <h3 className="m-2 text-2xl">{project.title}</h3>
+              </Link>
+            </article>
+          ))}
         </section>
       </article>
       <button
