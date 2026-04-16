@@ -1,10 +1,10 @@
-export type keyFeature = {
+export type KeyFeature = {
   imgSrc: string;
   imgAltDesc: string;
   title: string;
   description: string;
 };
-export type screenshot = {
+export type Screenshot = {
   imgSrc: string;
   imgAltDesc: string;
   caption: string;
@@ -13,16 +13,16 @@ export type Project = {
   title: string;
   imgSrc: string;
   imgAltDesc: string;
-  cardBrief?: string;
-  cardTech?: string[];
+  cardBrief: string;
+  cardTech: string[];
   slug: string;
-  description?: string;
-  url?: string;
-  github?: string;
-  technologies?: string[];
-  keyFeatures?: keyFeature[];
-  screenshots?: screenshot[];
-  reflection?: string;
+  description: string;
+  url: string;
+  github: string;
+  technologies: string[];
+  keyFeatures: KeyFeature[];
+  screenshots: Screenshot[];
+  reflection: string;
 };
 export type ProjectList = {
   name: Project;
