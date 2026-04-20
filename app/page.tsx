@@ -13,6 +13,7 @@ export default function Home() {
       duration: 2000,
     });
   }, []);
+
   return (
     <section
       className="m-4 sm:m-auto sm:w-120 md:w-180 lg:w-220"
@@ -40,6 +41,13 @@ export default function Home() {
                 cardBrief={project.cardBrief}
                 cardTech={project.cardTech}
                 slug={project.slug}
+                description={project.description}
+                url={project.url}
+                github={project.github}
+                technologies={project.technologies}
+                keyFeatures={project.keyFeatures}
+                screenshots={project.screenshots}
+                reflection={project.reflection}
               />
             ))}
           </>

@@ -23,7 +23,7 @@ export default async function ProjectSingle({
         description={project.description}
         url={project.url}
         github={project.github}
-        technologies={project.techonologies}
+        technologies={project.technologies}
         keyFeatures={project.keyFeatures}
         screenshots={project.screenshots}
         reflection={project.reflection}

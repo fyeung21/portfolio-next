@@ -4,13 +4,17 @@ import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import ClassNames from "embla-carousel-class-names";
-import { projectsList } from "@/public/lib/projectsList";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import type { Project } from "@/public/lib/projectsList";
 
-export default function Carousel() {
+export type CarouselProps = {
+  projectsList: Project[];
+};
+
+export default function Carousel({ projectsList }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [ClassNames()]);
 
   const goToPrev = () => emblaApi?.scrollPrev();

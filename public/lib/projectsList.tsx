@@ -24,9 +24,6 @@ export type Project = {
   screenshots: Screenshot[];
   reflection: string;
 };
-export type ProjectList = {
-  name: Project;
-};
 
 export const projectsList = {
   "catch-oscar": {
@@ -41,7 +38,7 @@ export const projectsList = {
       "‘Catch Oscar’ is a game that has 9 holes where different neighbourhood cats could appear out of. Only one cat will show at one time and will disappear after a couple seconds.",
     url: "https://fiona-yeung.com",
     github: "https://github.com/fyeung21/catch-oscar",
-    techonologies: ["HTML", "CSS", "JavaScript", "jQuery"],
+    technologies: ["HTML", "CSS", "JavaScript", "jQuery"],
     keyFeatures: [
       {
         imgSrc: "/ph-shop.jpg",
@@ -84,7 +81,7 @@ export const projectsList = {
       "An aesthetician clinic site something something different neighbourhood cats could appear out of. Only one cat will show at one time and will disappear after a couple seconds.",
     url: "https://fiona-yeung.com",
     github: "https://github.com/fyeung21/catch-oscar",
-    techonologies: ["NextJS", "TailwindCSS", "WordPress"],
+    technologies: ["NextJS", "TailwindCSS", "WordPress"],
     keyFeatures: [
       {
         imgSrc: "/dose-juice.jpg",
@@ -128,7 +125,7 @@ export const projectsList = {
       "‘Catch Oscar’ is a game that has 9 holes where different neighbourhood cats could appear out of. Only one cat will show at one time and will disappear after a couple seconds.",
     url: "https://fiona-yeung.com",
     github: "https://github.com/fyeung21/catch-oscar",
-    techonologies: ["HTML", "CSS", "JavaScript", "jQuery"],
+    technologies: ["HTML", "CSS", "JavaScript", "jQuery"],
     keyFeatures: [
       {
         imgSrc: "/ph-shop.jpg",
