@@ -5,7 +5,6 @@ import SkillsContainer from "./components/skillsContainer";
 import { projectsList } from "@/public/lib/projectsList";
 import ProjectCard from "./components/projectCard";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -14,6 +13,7 @@ export default function Home() {
       duration: 2000,
     });
   }, []);
+
   return (
     <section
       className="m-4 sm:m-auto sm:w-120 md:w-180 lg:w-220"
@@ -30,18 +30,24 @@ export default function Home() {
         </p>
       </section>
       <section className="m-auto my-12 max-w-100 md:grid md:max-w-none md:grid-cols-2 md:gap-8 lg:gap-16 lg:gap-x-24">
-        {projectsList.length !== 0 ? (
+        {projectsList !== null ? (
           <>
-            {projectsList.map((project, id) => (
+            {Object.values(projectsList).map((project, id) => (
               <ProjectCard
                 key={id}
-                id={project.id}
                 title={project.title}
                 imgSrc={project.imgSrc}
                 imgAltDesc={project.imgAltDesc}
                 cardBrief={project.cardBrief}
                 cardTech={project.cardTech}
                 slug={project.slug}
+                description={project.description}
+                url={project.url}
+                github={project.github}
+                technologies={project.technologies}
+                keyFeatures={project.keyFeatures}
+                screenshots={project.screenshots}
+                reflection={project.reflection}
               />
             ))}
           </>

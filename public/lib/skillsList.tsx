@@ -1,8 +1,14 @@
+export type SkillCategory = {
+  id: number;
+  title: string;
+  items: string[];
+};
+
 export const skillsList = [
   {
     id: 0,
     title: "Front-end",
-    skills: [
+    items: [
       "HTML",
       "CSS",
       "Sass",
@@ -15,11 +21,11 @@ export const skillsList = [
   {
     id: 1,
     title: "Back-end",
-    skills: ["PHP", "Postgres", "GraphQL"],
+    items: ["PHP", "Postgres", "GraphQL"],
   },
   {
     id: 2,
     title: "Tools and Systems",
-    skills: ["Wordpress", "Github", "Figma"],
+    items: ["Wordpress", "Github", "Figma"],
   },
 ];
