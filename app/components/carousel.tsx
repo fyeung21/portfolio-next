@@ -36,31 +36,33 @@ export default function Carousel({ projectsList }: CarouselProps) {
             <article
               key={id}
               className="embla__slide mx-4 shrink-0 grow-0 basis-64 opacity-100 lg:basis-84"
-            >
+            >    
               <Link href={project.slug}>
-                <article className="relative h-40 overflow-hidden rounded-2xl hover:border-amber-200 hover:shadow-card hover:ring-3 lg:h-55">
-                  <Image
-                    className="object-cover"
-                    src={project.imgSrc}
-                    alt={project.imgAltDesc}
-                    fill={true}
-                    priority
-                  />
-                </article>
-                <h3 className="m-2 text-2xl">{project.title}</h3>
+                <section className="group">
+                 <article className="relative h-40 overflow-hidden rounded-2xl duration-400 ease-in group-hover:border-amber-200 group-hover:shadow-card group-hover:ring-3 group-hover:transition-all group-hover:duration-400 group-hover:ease-out lg:h-55">
+                   <Image
+                     className="object-cover duration-400 ease-in group-hover:scale-105 group-hover:transition-all group-hover:duration-400 group-hover:ease-out"
+                     src={project.imgSrc}
+                     alt={project.imgAltDesc}
+                     fill={true}
+                     priority
+                   />
+                 </article>
+                 <h3 className="m-2 text-2xl">{project.title}</h3>
+                </section>
               </Link>
             </article>
           ))}
         </section>
       </article>
       <button
-        className="embla__prev absolute top-18 left-4 rounded-2xl p-2 shadow-inset ring-2 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3"
+        className="embla__prev absolute top-18 left-8 rounded-2xl p-2 shadow-inset ring-2 duration-200 ease-in hover:scale-105 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3 hover:transition-all hover:duration-200 hover:ease-out sm:left-25 md:left-20 lg:top-25 lg:left-30"
         onClick={goToPrev}
       >
         <ArrowLeftIcon className="size-10" />
       </button>
       <button
-        className="embla__next absolute top-18 right-4 rounded-2xl p-2 shadow-inset ring-2 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3"
+        className="embla__next absolute top-18 right-8 rounded-2xl p-2 shadow-inset ring-2 duration-200 ease-in hover:scale-105 hover:text-amber-200 hover:shadow-inset-fill-less hover:ring-3 hover:transition-all hover:duration-200 hover:ease-out sm:right-25 md:right-20 lg:top-25 lg:right-30"
         onClick={goToNext}
       >
         <ArrowRightIcon className="size-10" />

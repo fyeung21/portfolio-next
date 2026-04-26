@@ -5,7 +5,7 @@
   --foreground: #ffebaa;
   --gold-300: var(--foreground);
   --underline-glow: 0px 10px 10px -8px rgba(255, 235, 170, 0.8);
-  --card-glow: 0px 10px 10px -5px rgba(255, 235, 170, 0.8);
+  --card-glow: 0px 0px 10px 5px rgba(255, 235, 170, 0.8);
   --inset-glow: inset 0px 0px 15px 0px rgba(255, 235, 170, 0.8);
   --inset-fill-glow: inset 0px 0px 30px 8px rgba(255, 235, 170, 0.8);
   --inset-fill-less-glow: inset 0px 0px 20px 8px rgba(255, 235, 170, 0.8);
@@ -67,4 +67,82 @@ body {
 .embla__slide:not(.is-snapped) {
   opacity: 0.16;
   pointer-events: none;
+}
+
+/* CSS for floating particle animation */
+.particle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation:
+    float-up 20s infinite linear,
+    fade-out 20s infinite ease-out;
+}
+
+.particle.glow {
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  background-color: white;
+}
+
+.p1 {
+  left: 5%;
+  width: 5px;
+  height: 5px;
+  animation-duration: 19s;
+  animation-delay: 0s;
+}
+.p2 {
+  left: 15%;
+  width: 8px;
+  height: 8px;
+  animation-duration: 24s;
+  animation-delay: 2s;
+}
+.p3 {
+  left: 93%;
+  width: 3px;
+  height: 3px;
+  animation-duration: 17s;
+  animation-delay: 4s;
+}
+.p4 {
+  left: 90%;
+  width: 12px;
+  height: 12px;
+  animation-duration: 28s;
+  animation-delay: 1s;
+}
+.p5 {
+  left: 95%;
+  width: 6px;
+  height: 6px;
+  animation-duration: 21s;
+  animation-delay: 3s;
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-120vh) translateX(20px);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    display: none;
+  }
 }
