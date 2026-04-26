@@ -8,19 +8,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-
-export type project = {
-  title: string;
-  imgSrc: string;
-  imgAltDesc: string;
-  slug: string;
-};
+import type { Project } from "@/public/lib/projectsList";
 
 export type CarouselProps = {
-  itemList: project[];
+  projectsList: Project[];
 };
 
-export default function Carousel({ itemList }: CarouselProps) {
+export default function Carousel({ projectsList }: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [ClassNames()]);
 
   const goToPrev = () => emblaApi?.scrollPrev();
@@ -38,23 +32,23 @@ export default function Carousel({ itemList }: CarouselProps) {
     <section className="embla relative">
       <article className="embla__viewport overflow-hidden py-4" ref={emblaRef}>
         <section className="embla__container flex touch-pan-y touch-pinch-zoom flex-row">
-          {itemList.map((item, id) => (
+          {Object.values(projectsList).map((project, id) => (
             <article
               key={id}
               className="embla__slide mx-4 shrink-0 grow-0 basis-64 opacity-100 lg:basis-84"
-            >
-              <Link href={item.slug}>
+            >    
+              <Link href={project.slug}>
                 <section className="group">
-                  <article className="relative h-40 overflow-hidden rounded-2xl duration-400 ease-in group-hover:border-amber-200 group-hover:shadow-card group-hover:ring-3 group-hover:transition-all group-hover:duration-400 group-hover:ease-out lg:h-55">
-                    <Image
-                      className="object-cover duration-400 ease-in group-hover:scale-105 group-hover:transition-all group-hover:duration-400 group-hover:ease-out"
-                      src={item.imgSrc}
-                      alt={item.imgAltDesc}
-                      fill={true}
-                      priority
-                    />
-                  </article>
-                  <h3 className="m-2 text-2xl">{item.title}</h3>
+                 <article className="relative h-40 overflow-hidden rounded-2xl duration-400 ease-in group-hover:border-amber-200 group-hover:shadow-card group-hover:ring-3 group-hover:transition-all group-hover:duration-400 group-hover:ease-out lg:h-55">
+                   <Image
+                     className="object-cover duration-400 ease-in group-hover:scale-105 group-hover:transition-all group-hover:duration-400 group-hover:ease-out"
+                     src={project.imgSrc}
+                     alt={project.imgAltDesc}
+                     fill={true}
+                     priority
+                   />
+                 </article>
+                 <h3 className="m-2 text-2xl">{project.title}</h3>
                 </section>
               </Link>
             </article>

@@ -23,7 +23,7 @@ export default function ProjectNav() {
       <h2 className="mx-4 my-2 text-2xl font-bold italic md:mx-0">
         my other work
       </h2>
-      <Carousel itemList={projectsList} />
+      <Carousel projectsList={Object.values(projectsList)} />
     </section>
   );
 }
