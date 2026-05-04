@@ -4,7 +4,6 @@ import Carousel from "@/app/components/carousel";
 import { projectsList } from "@/public/lib/projectsList";
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function ProjectNav() {
   useEffect(() => {

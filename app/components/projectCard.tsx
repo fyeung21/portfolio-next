@@ -19,7 +19,7 @@ export default function ProjectCard(project: Project) {
 
           <section className="relative h-45 px-2 py-4">
             <h3 className="text-2xl">
-              <span className="duration-400 ease-in group-hover:border-b-2 group-hover:transition-all group-hover:duration-400 group-hover:ease-out">
+              <span className="duration-400 ease-in group-hover:transition-all group-hover:duration-400 group-hover:ease-out">
                 {project.title}
               </span>
             </h3>

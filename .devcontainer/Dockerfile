@@ -1,0 +1,5 @@
+FROM node:22
+
+WORKDIR /workspace
+
+ENV NEXT_TELEMETRY_DISABLED=1
