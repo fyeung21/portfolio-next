@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import Image from "next/image";
 import ExternalLink from "./externalLink";
 import AOS from "aos";
-// import "aos/dist/aos.css";
 
 export default function ProjectSingleDetails(project: Project) {
   useEffect(() => {
